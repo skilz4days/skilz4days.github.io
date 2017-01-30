@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF=8' />
+<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+<meta name='ad.size' content='width=300,height=600' />
+<script type="text/javascript"> var clickTag =""; </script>
+<title></title>
+
+
+<!-- CSS -->
+<style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+body {
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+    margin: 0px;
+    padding: 0;
+}
+img{
+	display:block;
+ 	/* in chrome, this makes image text look better and can also solve or create other image rendering problems */
+	-webkit-backface-visibility: hidden;
+}
+a {
+    text-decoration: none;
+}
+sup{
+    position: absolute;
+    vertical-align: super;
+}
+#main {
+	width: 300px;
+	height: 600px;
+	background-color:#FFF;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+.main div {
+	position: absolute;
+}
+#border{
+	cursor: pointer; cursor: hand;
+}
+#border{
+	width: 298px;
+	height: 598px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333;
+}
+
+#bg{
+	width: 300px;
+	height: 600px;
+	background-color: #FFF;
+}
+
+#cta {
+	overflow: hidden;
+}
+</style>
+</head>
+
+
+<body>
+<!-- div layering -->
+<div id='main' class='main'>
+	<a href='javascript:window.open(window.clickTag)'>
+		<div id='banner'>
+			<div id='bg'></div>
+			<div id='copy6d'>
+				<div id='copy6d-base'><img src='copy6d_base.png' id='copy6d-base-img'/></div>
+				<div id='copy6d-mask'><img src='copy6d_mask.png' id='copy6d-mask-img'/></div>
+			</div>
+			<div id='copy6a'>
+				<div id='copy6a-gradient'><img src='gradient.jpg' id='copy6a-gradient-img'/></div>
+				<div id='copy6a-mask'><img src='copy6a_mask.png' id='copy6a-mask-img'/></div>
+			</div>
+			<div id='copy6b'><img src='copy6b.png' id='copy6b-img'/></div>
+			<div id='copy6c'><img src='copy6c.png' id='copy6c-img'/></div>
+			<div id='bg2'><img src='bg2.jpg' id='bg2-img'/></div>
+			<div id='bg1'><img src='bg1.jpg' id='bg1-img'/></div>
+			<div id='bg3'><img src='bg3.jpg' id='bg3-img'/></div>
+			<div id='bg4'><img src='bg4.jpg' id='bg4-img'/></div>
+			<div id='logo'><img src='logo.png' id='logo-img'/></div>
+			<div id='copy1a'>
+				<div id='copy1a-gradient'><img src='gradient.jpg' id='copy1a-gradient-img'/></div>
+				<div id='copy1a-mask'><img src='copy1a_mask.png' id='copy1a-mask-img'/></div>
+			</div>
+			<div id='copy1b'><img src='copy1b.png' id='copy1b-img'/></div>
+			<div id='copy1c'><img src='copy1c.png' id='copy1c-img'/></div>
+			<div id='copy1d'><img src='copy1d.png' id='copy1d-img'/></div>
+			<div id='copy2a'><img src='copy2a.png' id='copy2a-img'/></div>
+			<div id='copy2b'><img src='copy2b.png' id='copy2b-img'/></div>
+			<div id='copy2c'><img src='copy2c.png' id='copy2c-img'/></div>
+			<div id='copy2d'><img src='copy2d.png' id='copy2d-img'/></div>
+			<div id='copy2e'><img src='copy2e.png' id='copy2e-img'/></div>
+			<div id='copy3a'><img src='copy3a.png' id='copy3a-img'/></div>
+			<div id='copy3b'><img src='copy3b.png' id='copy3b-img'/></div>
+			<div id='copy3c'><img src='copy3c.png' id='copy3c-img'/></div>
+			<div id='copy3d'><img src='copy3d.png' id='copy3d-img'/></div>
+			<div id='copy4a'><img src='copy4a.png' id='copy4a-img'/></div>
+			<div id='copy4b'><img src='copy4b.png' id='copy4b-img'/></div>
+			<div id='copy4c'><img src='copy4c.png' id='copy4c-img'/></div>
+			<div id='copy4d'><img src='copy4d.png' id='copy4d-img'/></div>
+			<div id='copy5a'><img src='copy5a.png' id='copy5a-img'/></div>
+			<div id='copy5b'><img src='copy5b.png' id='copy5b-img'/></div>
+			<div id='copy5c'><img src='copy5c.png' id='copy5c-img'/></div>
+			<div id='copy5d'><img src='copy5d.png' id='copy5d-img'/></div>
+			<div id='copy5e'><img src='copy5e.png' id='copy5e-img'/></div>
+			<div id='bottle'><img src='bottle.png' id='bottle-img'/></div>
+			<div id='flare'><img src='flare.png' id='flare-img'/></div>
+			<div id='cta'>
+				<div id='cta-base'><img src='cta.png' id='cta-base-img'/></div>
+				<div id='cta-flare'><img src='cta_flare.png' id='cta-flare-img'/></div>
+			</div>
+			<div id='border'></div>
+		</div>
+	</a>
+</div>
+
+
+<!-- javascript animation includes -->
+<script src="cssplugin.js"></script>
+<script src="easepack.js"></script>
+<script src="tweenlite.js"></script>
+
+
+<!-- assure images are all preloaded -->
+<script type='text/javascript'>
+var main =  document.getElementById('main');
+main.style.display = 'none';
+var imageIdList = new Array ( 	
+								'logo-img',
+								'bg1-img',
+								'bg2-img',
+								'bg3-img',
+								'bg4-img',
+								'copy1a-gradient-img',
+								'copy1a-mask-img',
+								'copy1b-img',
+								'copy1c-img',
+								'copy1d-img',
+								'copy2a-img',
+								'copy2b-img',
+								'copy2c-img',
+								'copy2d-img',
+								'copy2e-img',
+								'copy3a-img',
+								'copy3b-img',
+								'copy3c-img',
+								'copy3d-img',
+								'copy4a-img',
+								'copy4b-img',
+								'copy4c-img',
+								'copy4d-img',
+								'copy5a-img',
+								'copy5b-img',
+								'copy5c-img',
+								'copy5d-img',
+								'copy5e-img',
+								'copy6a-gradient-img',
+								'copy6a-mask-img',
+								'copy6b-img',
+								'copy6c-img',
+								'copy6d-base-img',
+								'copy6d-mask-img',
+								'bottle-img',
+								'flare-img',
+								'cta-base-img',
+								'cta-flare-img'
+							);
+var checkLoadInterval = setInterval( checkLoad, 50 );
+function checkLoad () {
+	var totalImages = imageIdList.length;
+	var imageLoadCount = 0;
+	for (;totalImages--;) {
+		var theImage = document.getElementById(imageIdList[totalImages]);
+	    if (theImage.naturalHeight) {
+		  imageLoadCount++;
+	   }
+	}
+	if ( imageLoadCount >= imageIdList.length ) {
+		clearInterval( checkLoadInterval );
+		initAnimation();
+	}
+}
+
+function initAnimation () {
+
+	// define variables
+	var t = TweenLite;
+	var stageWidth = 300;
+	var stageHeight = 600;
+	var phase = 0;
+	var phaseDelay = .1;
+	var frameCount = 0;
+	var transitionTime = 1;
+	var ctaIsVisible = false;
+	var maxLoops = 3;
+	var currentLoop = 1;
+	var copyCascade = 0.22;
+	var fadeTime = 0.6;
+
+	var ctaX = 98;
+	var ctaY = 563;
+	var ctaOverX = 92;
+	var ctaOverY = 562;
+
+	var bg = document.getElementById('bg');
+	var bg1 = document.getElementById('bg1');
+	var bg2 = document.getElementById('bg2');
+	var bg3 = document.getElementById('bg3');
+	var bg4 = document.getElementById('bg4');
+	var logo = document.getElementById('logo');
+	var copy1a = document.getElementById('copy1a');
+	var copy1aGradient = document.getElementById('copy1a-gradient');
+	var copy1aMask = document.getElementById('copy1a-mask');
+	var copy1b = document.getElementById('copy1b');
+	var copy1c = document.getElementById('copy1c');
+	var copy1d = document.getElementById('copy1d');
+	var copy2a = document.getElementById('copy2a');
+	var copy2b = document.getElementById('copy2b');
+	var copy2c = document.getElementById('copy2c');
+	var copy2d = document.getElementById('copy2d');
+	var copy2e = document.getElementById('copy2e');
+	var copy3a = document.getElementById('copy3a');
+	var copy3b = document.getElementById('copy3b');
+	var copy3c = document.getElementById('copy3c');
+	var copy3d = document.getElementById('copy3d');
+	var copy4a = document.getElementById('copy4a');
+	var copy4b = document.getElementById('copy4b');
+	var copy4c = document.getElementById('copy4c');
+	var copy4d = document.getElementById('copy4d');
+	var copy5a = document.getElementById('copy5a');
+	var copy5b = document.getElementById('copy5b');
+	var copy5c = document.getElementById('copy5c');
+	var copy5d = document.getElementById('copy5d');
+	var copy5e = document.getElementById('copy5e');
+	var copy6a = document.getElementById('copy6a');
+	var copy6aGradient = document.getElementById('copy6a-gradient');
+	var copy6aMask = document.getElementById('copy6a-mask');
+	var copy6b = document.getElementById('copy6b');
+	var copy6c = document.getElementById('copy6c');
+	var copy6dBase = document.getElementById('copy6d-base');
+	var copy6dMask = document.getElementById('copy6d-mask');
+	var bottle = document.getElementById('bottle');
+	var flare = document.getElementById('flare');
+	var cta = document.getElementById('cta');
+	var ctaFlare = document.getElementById('cta-flare');
+	var border = document.getElementById('border');
+
+	// hide all elements (ignore inner elements)
+	hide(bg);
+	hide(bg1);
+	hide(bg2);
+	hide(bg3);
+	hide(bg4);
+	hide(logo);
+	hide(copy1a);
+	hide(copy1b);
+	hide(copy1c);
+	hide(copy1d);
+	hide(copy2a);
+	hide(copy2b);
+	hide(copy2c);
+	hide(copy2d);
+	hide(copy2e);
+	hide(copy3a);
+	hide(copy3b);
+	hide(copy3c);
+	hide(copy3d);
+	hide(copy4a);
+	hide(copy4b);
+	hide(copy4c);
+	hide(copy4d);
+	hide(copy5a);
+	hide(copy5b);
+	hide(copy5c);
+	hide(copy5d);
+	hide(copy5e);
+	hide(copy6a);
+	hide(copy6b);
+	hide(copy6c);
+	hide(copy6d);
+	hide(bottle);
+	hide(flare);
+	hide(cta);
+	hide(border);
+
+    ctaIsVisible = true;
+
+    advance();
+
+	function advance () {
+		    
+		if (phase== 0) {
+
+		    show(main);
+			show(bg);
+			show(border);
+
+			show(logo);
+			t.set(logo, {x:0, y:0, scale:0.5, transformOrigin:'top left'});
+
+			show(bg1);
+			t.set(bg1, {x:0, y:41, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(bg1, 0.4, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(bottle);
+			t.set(bottle, {x:108, y:202, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+
+			show(cta);
+			t.set(cta, {x:ctaX, y:ctaY, width:229, height:59, scale:100/110/2, transformOrigin:'top left'});
+			t.set(ctaFlare, {x:-136});
+
+		    delay(0.2);
+		}
+		else if (phase == 1) {
+
+			show(copy1a);
+			t.set(copy1a, {alpha:0.0, y:69, transformOrigin:'top left'});
+			t.to(copy1a, 0.4, {alpha:1.0, ease:Quad.easeInOut});
+
+			t.set(copy1aMask, {x:0, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.set(copy1aGradient, {x:-250, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy1aGradient, 1.0, {x:0, ease:Linear.easeNone});
+			
+			show(copy1b);
+			t.set(copy1b, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy1b, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*1});
+			
+			show(copy1c);
+			t.set(copy1c, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy1c, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*2});
+			
+			show(copy1d);
+			t.set(copy1d, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy1d, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*3});
+			
+			show(flare);
+			t.set(flare, {x:112, y:172, alpha:0.0, scale:0.5, rotationZ:'0.01deg'});
+			t.to(flare, fadeTime, {alpha:1.0, ease:Quad.easeOut});
+			t.to(flare, 15, {y:460, ease:Linear.easeNone});
+			
+		    delay(1.8);
+		}
+		else if (phase == 2) {
+
+			t.to(bg1, fadeTime, {alpha:0.0, ease:Quad.easeInOut, delay:copyCascade});
+			t.to(copy1a, .25, {alpha:0.0, ease:Quad.easeInOut, delay:.15});
+			t.to(copy1b, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy1c, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy1d, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+
+		    delay(0.6);
+		}
+		else if (phase == 3) {
+			
+			show(bg2);
+			t.set(bg2, {x:-38, y:192, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(bg2, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy2a);
+    		t.set(copy2a, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy2a, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy2b);
+			t.set(copy2b, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy2b, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy2c);
+			t.set(copy2c, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy2c, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy2d);
+			t.set(copy2d, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy2d, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy2e);
+			t.set(copy2e, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy2e, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+		    delay(2.3);
+		}
+		else if (phase == 4) {
+
+			t.to(bg2, 0.8, {x:-400, ease:Quad.easeInOut});
+			t.to(copy2a, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy2b, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy2c, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy2d, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy2e, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+
+		    delay(0.6);
+		}
+		else if (phase == 5) {
+
+			show(bg3);
+			t.set(bg3, {x:301, y:201, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(bg3, fadeTime, {x:-51, ease:Quad.easeInOut});
+
+			show(copy3a);
+			t.set(copy3a, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy3a, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy3b);
+			t.set(copy3b, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy3b, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*1});
+
+			show(copy3c);
+			t.set(copy3c, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy3c, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*1});
+
+			show(copy3d);
+			t.set(copy3d, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy3d, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*2});
+
+		    delay(1.4);
+		}
+		else if (phase == 6) {
+
+			t.to(bg3, fadeTime, {x:-400, ease:Quad.easeInOut});
+			t.to(copy3a, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy3b, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy3c, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy3d, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			
+		    delay(0.6);
+		}
+		else if (phase == 7) {
+
+			show(bg4);
+			t.set(bg4, {x:340, y:174, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(bg4, fadeTime, {x:40, ease:Quad.easeInOut});
+
+			show(copy4a);
+			t.set(copy4a, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy4a, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy4b);
+			t.set(copy4b, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy4b, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*1});
+
+			show(copy4c);
+			t.set(copy4c, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy4c, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*1});
+
+			show(copy4d);
+			t.set(copy4d, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy4d, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*2});
+			
+		    delay(1.4);
+		}
+		else if (phase == 8) {
+
+			t.to(bg4, fadeTime, {x:-307, ease:Quad.easeInOut, delay:copyCascade});
+			t.to(copy4a, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy4b, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy4c, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy4d, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			
+		    delay(0.6);
+		}
+		else if (phase == 9) {
+
+			show(bg2);
+			//t.set(bg2, {x:350, y:192, alpha:1.0, scale:0.5, transformOrigin:'top left' });
+			//t.to(bg2, 0.8, {x:-38, y:192, ease:Quad.easeInOut});
+			t.set(bg2, {x:125, y:342, alpha:1.0, scale:0.08});
+			t.to(bg2, 3.5, {x:-38, y:196, scale:0.5, ease:Quad.easeInOut});
+
+			show(copy5a);
+			t.set(copy5a, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy5a, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy5b);
+			t.set(copy5b, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy5b, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy5c);
+			t.set(copy5c, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy5c, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy5d);
+			t.set(copy5d, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy5d, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+			show(copy5e);
+			t.set(copy5e, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy5e, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+		    delay(2.0);
+		}
+		else if (phase == 10) {
+
+			t.to(copy5a, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy5b, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy5c, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy5d, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+			t.to(copy5e, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+
+		    delay(0.6);
+		}
+		else if (phase == 11) {
+
+			show(copy6a);
+			t.set(copy6a, {alpha:0.0, transformOrigin:'top left'});
+			t.to(copy6a, 0.4, {alpha:1.0, ease:Quad.easeInOut});
+
+			t.set(copy6aMask, {x:0, y:68, scale:0.5, transformOrigin:'top left'});
+			t.set(copy6aGradient, {x:-250, y:68, scale:0.5, transformOrigin:'top left'});
+			t.to(copy6aGradient, 1.0, {x:0, ease:Linear.easeNone});
+
+			show(copy6b);
+			t.set(copy6b, {x:0, y:0, alpha:0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy6b, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*1});
+
+			show(copy6d);
+			t.set(copy6d, {x:100, y:142, alpha:1.0, transformOrigin:'top left'});
+			t.set(copy6dBase, {scale:0.5, transformOrigin:'top left'});
+			t.set(copy6dMask, {x:-78, scale:0.5, transformOrigin:'top left'});
+			t.to(copy6dMask, 1.2, {x:90, ease:Quad.easeInOut});
+
+			show(copy6c);
+			t.set(copy6c, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(copy6c, fadeTime, {alpha:1.0, ease:Quad.easeInOut, delay:copyCascade*2});
+
+			
+		    delay(0.9);
+		}		
+		else if (phase == 12) {
+		     
+			t.to(cta, 0.6, {x:ctaOverX, y:ctaOverY, scale:0.5, onComplete:function(){
+																t.to(cta, 0.6, {x:ctaX, y:ctaY, scale:100/110/2}) 
+															}
+							}
+				);
+			
+			t.delayedCall( 0.3, goCTAFlare);
+
+		    delay(1.0);
+		}		
+		else if (phase == 13) {
+		      
+    		if (currentLoop < maxLoops)
+    		{
+				show(bg1);
+				t.to(bg1, 0, {alpha:0.0, ease:Quad.easeInOut});
+				t.to(bg1, fadeTime, {alpha:1.0, ease:Quad.easeInOut});
+
+				t.to(bg2, fadeTime, {alpha:0.0, ease:Quad.easeInOut});
+				t.to(flare, fadeTime, {alpha:0.0, ease:Expo.easeInOut});
+				t.to(copy6a, fadeTime, {alpha:0.0, ease:Quad.easeInOut, delay: 1.0});
+				t.to(copy6b, fadeTime, {alpha:0.0, ease:Quad.easeInOut, delay: 1.0});
+				t.to(copy6c, fadeTime, {alpha:0.0, ease:Quad.easeInOut, delay: 1.0});
+				t.to(copy6d, fadeTime, {alpha:0.0, ease:Quad.easeInOut, delay: 1.0});
+
+    			phase = -1;
+    			currentLoop++
+
+		    	delay(fadeTime);
+    		}
+		}
+    }
+
+    function goCTAFlare () {
+		t.set(ctaFlare, {x:-136});
+		t.to(ctaFlare, 1.9, {x:270, ease:Expo.easeOut})
+    }
+
+	border.onmouseover = function() {
+		if (!ctaIsVisible) return;
+		t.to(cta, .5, { x:ctaOverX, y:ctaOverY, scale:0.5, ease:Expo.easeOut});
+		goCTAFlare();
+	}
+
+	border.onmouseout = function() {
+		if (!ctaIsVisible) return;
+		t.to(cta, .5, { x:ctaX, y:ctaY, scale:100/110/2, ease:Expo.easeOut});
+	}
+	
+	border.onclick = function() {
+		t.to(cta, .5, { x:ctaX, y:ctaY, scale:100/110/2, ease:Expo.easeOut});
+	}
+
+	// utility functions
+	function hide(element) {
+		element.style.display = 'none';
+	}
+	
+	function show(element) {
+		element.style.display = 'block';
+	}
+	
+	// returns the distance from the left side of the banner to the left side of the element in question
+	function getX(element) { 
+		var mainRect = main.getBoundingClientRect();
+		var elemRect = element.getBoundingClientRect();
+		return elemRect.left - mainRect.left;
+	}
+
+	// returns the distance from the top of the banner to the top of the element in question
+	function getY(element) { 
+    	var mainRect = main.getBoundingClientRect();
+    	var elemRect = element.getBoundingClientRect();
+    	return elemRect.top - mainRect.top;
+    }
+
+	function delay(time) {
+	    t.delayedCall(time, advance);
+	    phase++;
+	}
+
+}
+</script>
+
+
+</body>
+</html>
+
