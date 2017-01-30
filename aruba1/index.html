@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF=8' />
+<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+<meta name='ad.size' content='width=300,height=600' />
+<script type="text/javascript"> var clickTag ="blank"; </script>
+<title></title>
+
+
+<!-- CSS -->
+<style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+body {
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+img{
+	display:block;
+	-webkit-backface-visibility: hidden;
+}
+a {
+    text-decoration: none;
+}
+sup{
+    position: absolute;
+    vertical-align: super;
+}
+#main {
+	width: 300px;
+	height: 600px;
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+.main div {
+	position: absolute;
+}
+#border{
+	cursor: pointer; cursor: hand;
+}
+#border{
+	width: 298px;
+	height: 598px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- div layering -->
+<div id='main' class='main'>
+	<a href='javascript:window.open(window.clickTag)'>
+		<div id='banner'>
+			<div id='bg'><img src='bg.jpg' id='bg_img'/></div>
+			<div id='bg2'><img src='bg2.jpg' id='bg2_img'/></div>
+			<div id='logo'><img src='logo.png' id='logo_img'/></div>
+			<div id='star1'><img src='star1.png' id='star1_img'/></div>
+			<div id='name'><img src='name.png' id='name_img'/></div>
+			<div id='localtip'><img src='localtip.png' id='localtip_img'/></div>
+			<div id='copy1'><img src='copy1.png' id='copy1_img'/></div>
+			<div id='copy2'><img src='copy2.png' id='copy2_img'/></div>
+			<div id='copy3a'><img src='copy3a.png' id='copy3a_img'/></div>
+			<div id='copy3b'><img src='copy3b.png' id='copy3b_img'/></div>
+			<div id='cta'>
+				<div id='cta-base'><img src='cta.png' id='cta_img'/></div>
+				<div id='cta-over'><img src='cta_over.png' id='cta_over_img'/></div>
+			</div>
+			<div id='border'></div>
+		</div>
+	</a>
+</div>
+
+
+<!-- javascript animation includes -->
+<script src="CSSPlugin.min.js"></script>
+<script src="EasePack.min.js"></script>
+<script src="TweenLite.min.js"></script>
+
+
+<!-- assure images are all preloaded -->
+<script type='text/javascript'>
+var main =  document.getElementById('main');
+main.style.display = 'none';
+var imageIdList = new Array (
+
+								'bg_img',
+								'bg2_img',
+								'logo_img',
+								'star1_img',
+								'name_img',
+								'localtip_img',
+								'copy1_img',
+								'copy2_img',
+								'copy3a_img',
+								'copy3b_img',
+								'cta_img',
+								'cta_over_img'
+							);
+var checkLoadInterval = setInterval( checkLoad, 50 );
+function checkLoad () {
+	var totalImages = imageIdList.length;
+	var imageLoadCount = 0;
+	for (;totalImages--;) {
+		var theImage = document.getElementById(imageIdList[totalImages]);
+		var rh = theImage.naturalHeight;
+		if (rh) {
+			imageLoadCount++;
+		}
+	}
+	if ( imageLoadCount >= imageIdList.length ) {
+		clearInterval( checkLoadInterval );
+		initAnimation();
+	}
+}
+
+function initAnimation () {
+
+	// define variables
+	var t = TweenLite;
+	var stageWidth = 300;
+	var stageHeight = 600;
+	var phase = 0;
+	var frameCount = 0;
+	var transitionTime = 1;
+	var ctaIsVisible = false;
+	var maxLoops = 3;
+	var currentLoop = 1;
+	var textTime = 0.9;
+	var textCasc = 0.5;
+	var textStartX = -300;
+	var textStartY = 38;
+	var ctaX = 72;
+	var ctaY = 467;
+
+	var main = document.getElementById('main');
+	var bg = document.getElementById('bg');
+	var bg2 = document.getElementById('bg2');
+	var logo = document.getElementById('logo');
+	var star1 = document.getElementById('star1');
+	var name = document.getElementById('name');
+	var localTip = document.getElementById('localtip');
+	var copy1 = document.getElementById('copy1');
+	var copy2 = document.getElementById('copy2');
+	var copy3a = document.getElementById('copy3a');
+	var copy3b = document.getElementById('copy3b');
+	var cta = document.getElementById('cta');
+	var ctaBase = document.getElementById('cta-base');
+	var ctaOver = document.getElementById('cta-over');
+	var border = document.getElementById('border');
+
+	// initial setup
+	hide( bg );
+	hide( bg2 );
+	hide( logo );
+	hide( star1 );
+	hide( name );
+	hide( localTip );
+	hide( copy1 );
+	hide( copy2 );
+	hide( copy3a );
+	hide( copy3b );
+	hide( cta );
+	hide( border );
+
+	advance();
+
+	function advance () {
+
+		if ( phase == 0 ) {
+
+		    show( main );
+		    show( border );
+
+		    show( bg );
+			t.set(bg, {scale:0.5, alpha:1.0, transformOrigin:'top left'});
+
+		    show( logo );
+			t.set(logo, {x:86, y:-76, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(logo, 0.5, {y:0, ease:Expo.easeInOut});
+
+		    show( star1 );
+			t.set(star1, {x:-60, y:294, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(star1, textTime, {x:10, y:294, alpha:1.0, ease:Expo.easeInOut, delay:0.2});
+
+		    show( name );
+			t.set(name, {x:textStartX, y:textStartY, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(name, textTime, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+
+		    show( localTip );
+			t.set(localTip, {x:textStartX, y:textStartY, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(localTip, textTime, {x:0, y:0, ease:Expo.easeInOut, delay:0.4});
+
+			delay(2.8);
+		}
+		else if ( phase == 1 ) {
+
+			t.to(star1, 1.2, {x:10, y:330, alpha:1.0, ease:Expo.easeInOut, delay:0.6});
+			t.to(name, textTime, {x:textStartX, y:textStartY, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+			t.to(localTip, textTime, {x:textStartX, y:textStartY, alpha:1.0, ease:Expo.easeInOut, delay:0.2});
+
+			delay(1.05);
+		}
+		else if ( phase == 2 ) {
+
+			show( copy1 );
+			t.set(copy1, {x:textStartX, y:textStartY, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(copy1, textTime, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+
+			delay(2.6);
+		}
+		else if ( phase == 3 ) {
+
+			t.to(copy1, textTime, {x:textStartX, y:textStartY, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+
+		    delay(0.5);
+		}
+		else if ( phase == 4 ) {
+
+			show( copy2 );
+			t.set(copy2, {x:textStartX, y:textStartY, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(copy2, textTime, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+
+		    delay(2.6);
+		}
+		else if ( phase == 5 ) {
+
+			t.to(star1, 1.2, {x:6, y:158, alpha:1.0, ease:Expo.easeInOut, delay:0.2});
+			t.to(copy2, textTime, {x:textStartX, y:40, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+
+		    delay(0.5);
+		}
+		else if ( phase == 6 ) {
+
+			t.to(bg, 1.0, {y:-600, ease:Expo.easeInOut, delay:0.0});
+
+		    show( bg2 );
+			t.set(bg2, {x:0, y:600, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(bg2, 1.0, {y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.0});
+
+		    show( copy3a );
+			t.set(copy3a, {x:textStartX, y:textStartY, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(copy3a, textTime, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.2});
+
+		    show( copy3b );
+			t.set(copy3b, {x:textStartX, y:textStartY, scale:0.5, alpha:1.0, transformOrigin:'top left'});
+			t.to(copy3b, textTime, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.4});
+
+		    show( cta );
+			t.set(cta, {x:300, y:467, scale:0.5, alpha:0.0, transformOrigin:'top left'});
+			t.to(cta, textTime, {x:72, y:467, alpha:1.0, ease:Expo.easeInOut, delay:0.6});
+
+		    show( ctaBase );
+			t.set(ctaBase, {alpha:1.0, transformOrigin:'top left'});
+
+		    show( ctaOver );
+			t.set(ctaOver, {alpha:0.0, transformOrigin:'top left'});
+
+    		ctaIsVisible = true;
+
+		    delay(3.9);
+		}
+		else if (phase == 7) {
+
+    		if (currentLoop < maxLoops)
+    		{
+    			var aniTime = 0.9;
+				t.to(logo, aniTime, {y:-76, ease:Expo.easeInOut});
+				t.to(bg, aniTime, {y:0, ease:Expo.easeInOut});
+				t.to(bg2, aniTime, {y:600, alpha:1.0, ease:Expo.easeInOut});
+				t.to(star1, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(name, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(localTip, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(copy1, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(copy2, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(copy3a, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(copy3b, aniTime, {y:600, ease:Expo.easeInOut});
+				t.to(cta, aniTime, {y:467+600, ease:Expo.easeInOut});
+
+	   			ctaIsVisible = false;
+    			phase = -1;
+    			currentLoop++
+
+				delay(aniTime);
+    		}
+		}
+    }
+
+	border.onmouseover = function() {
+		if (!ctaIsVisible) return;
+		t.to(ctaBase, 0.2, {alpha:0.0, ease:Quad.easeOut});
+		t.to(ctaOver, 0.2, {alpha:1.0, ease:Quad.easeOut});
+	}
+
+	border.onmouseout = function() {
+		if (!ctaIsVisible) return;
+		t.to(ctaBase, 0.2, {alpha:1.0, ease:Quad.easeOut});
+		t.to(ctaOver, 0.2, {alpha:0.0, ease:Quad.easeOut});
+	}
+
+	border.onclick = function() {
+		t.to(cta, 0.2, { x:ctaX, y:ctaY, scale:0.5, ease:Quad.easeOut});
+	}
+
+
+	// utility functions
+	function hide(element) {
+		element.style.display = 'none';
+	}
+
+	function show(element) {
+		element.style.display = 'block';
+	}
+
+	// returns the distance from the left side of the banner to the left side of the element in question
+	function getX(element) {
+		var mainRect = main.getBoundingClientRect();
+		var elemRect = element.getBoundingClientRect();
+		return elemRect.left - mainRect.left;
+	}
+
+	// returns the distance from the top of the banner to the top of the element in question
+	function getY(element) {
+    	var mainRect = main.getBoundingClientRect();
+    	var elemRect = element.getBoundingClientRect();
+    	return elemRect.top - mainRect.top;
+    }
+
+	function delay(time) {
+	    t.delayedCall(time, advance);
+	    phase++;
+	}
+}
+</script>
+
+
+</body>
+</html>
