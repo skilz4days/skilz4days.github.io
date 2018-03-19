@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+<meta name='ad.size' content='width=300,height=600' />
+<script type="text/javascript">var clickTag = "blank"; </script>
+<title>300x600</title>
+
+
+<!-- CSS -->
+<style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+body {
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+img{
+	display:block;
+	-webkit-backface-visibility: hidden;
+}
+a {
+    text-decoration: none;
+}
+sup{
+    position: absolute;
+    vertical-align: super;
+}
+#main {
+	width: 300px;
+	height: 600px;
+	background-color: #000;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+.main div {
+	position: absolute;
+}
+#border{
+	width: 298px;
+	height: 598px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    cursor: pointer; cursor: hand;
+}
+/*masked text fields*/
+#cta
+{
+	overflow: hidden;
+	cursor: pointer; cursor: hand;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- div layering -->
+<div id='main' class='main'>
+	<a href='javascript:window.open(window.clickTag)'>
+		<div id='container'>
+			<div id='bg1'><img src='bg1.jpg' id='bg1_img'/></div>
+			<div id='copy1a'><img src='copy1a.png' id='copy1a_img' /></div>	
+			<div id='copy2a'><img src='copy2a.png' id='copy2a_img' /></div>	
+			<div id='copy3a'><img src='copy3a.png' id='copy3a_img' /></div>	
+			<div id='gradient'><img src='gradient.png' id='gradient_img' /></div>
+			<div id='logo'><img src='logo.png' id='logo_img'/></div>
+			<div id='cta'>
+				<div id='cta_border'><img src='cta_border.png' id='cta_border_img' /></div>
+				<div id='cta_flare'><img src='cta_flare.png' id='cta_flare_img' /></div>
+			</div>
+			<div id='border'></div>
+		</div>
+	</a>
+</div>
+
+
+<!-- javascript animation includes -->
+<script src="CSSPlugin.min.js"></script>
+<script src="EasePack.min.js"></script>
+<script src="TweenLite.min.js"></script>
+
+<!-- assure images are all preloaded -->
+<script type='text/javascript'>
+var main =  document.getElementById('main');
+main.style.display = 'none';
+
+var imageIdList = new Array ( 	
+								'bg1_img',
+								'logo_img',
+								'copy1a_img',
+								'copy2a_img',
+								'copy3a_img',
+								'gradient_img',
+								'cta_border_img',
+								'cta_flare_img',
+							);
+var checkLoadInterval = setInterval( checkLoad, 50 );
+function checkLoad () {
+	var totalImages = imageIdList.length;
+	var imageLoadCount = 0;
+	for (;totalImages--;) {
+		var theImage = document.getElementById(imageIdList[totalImages]);
+		var rh = theImage.naturalHeight;
+		if (rh) {
+			imageLoadCount++;
+		}
+	}
+	if ( imageLoadCount >= imageIdList.length ) {
+		clearInterval( checkLoadInterval );
+		initAnimation();
+	}
+}
+
+function initAnimation () {
+
+	// define variables
+	var t = TweenLite;
+	var stageWidth = 300;
+	var stageHeight = 600;
+	var phase = 0;
+	var frameCount = 0;
+	var transitionTime = 1;
+	var ctaIsVisible = false;
+	var maxLoops = 1;
+	var currentLoop = 1;
+	var textWidth = stageWidth;
+	var textZoomTime = 1.0;
+
+	var bg1 = document.getElementById('bg1');
+	var logo = document.getElementById('logo');
+	var copy1a = document.getElementById('copy1a');
+	var copy2a = document.getElementById('copy2a');
+	var copy3a = document.getElementById('copy3a');
+	var gradient = document.getElementById('gradient');
+	var cta = document.getElementById('cta');
+	var ctaBorder = document.getElementById('cta_border');
+	var ctaFlare = document.getElementById('cta_flare');
+	var border = document.getElementById('border');
+
+	// initial setup
+	hide( bg1 );
+	hide( logo );
+	hide( copy1a );
+	hide( copy2a );
+	hide( copy3a );
+	hide( gradient );
+	hide( cta );
+	hide( border );
+
+	advance();
+
+	function advance () {
+		    
+		if ( phase == 0 ) {
+
+		    show( main );
+		    show( border );
+
+		    show( gradient );
+			t.set(gradient, {x:0, y:0, scale:0.5, transformOrigin:'top left'});
+
+		    show( bg1 );
+			t.set(bg1, {x:0, y:-28, scale:0.22, rotationZ:'0.01deg', force3D:true, transformOrigin:'top left'});
+			t.to(bg1, 4.8, {x:-15, y:-73, scale:0.24, rotationZ:'0.01deg', force3D:true, ease:Linear.easeNone, delay:0.2});
+
+		    show( copy1a );
+			t.set(copy1a, {x:0, y:0, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy1a, 1.7, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut});
+
+		    delay(5.00);
+		}
+		else if ( phase == 1 ) {
+
+			t.to(bg1, 1.8, {x:-190, y:-572, scale:0.5, rotationZ:'0.01deg', force3D:true, ease:Quad.easeOut});
+			
+			t.to(copy1a, 0.7, {alpha:0.0, ease:Expo.easeOut});
+
+		    show( logo );
+			t.set(logo, {x:0, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(logo, 1.5, {alpha:1.0, ease:Expo.easeInOut});
+
+		    show( copy2a );
+			t.set(copy2a, {x:-15, y:-10, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy2a, 1.5, {alpha:1.0, ease:Expo.easeInOut});
+
+		    delay(3.6);
+		}
+		else if ( phase == 2 ) {
+
+			t.to(copy2a, 1.1, {alpha:0.0, ease:Expo.easeOut});
+			
+		    show( copy3a );
+			t.set(copy3a, {x:0, y:0, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy3a, 1.5, {x:0, y:0, alpha:1.0, ease:Expo.easeInOut, delay:0.3});
+
+			show(cta);
+			t.set(cta, {x:56, y:139, width:375, height:50, alpha:0, scale:0.5, transformOrigin:'top left'});
+			t.to(cta, 2.0, {alpha:1, delay:0.3, ease:Expo.easeInOut})
+			t.set(ctaFlare, {x:-200});
+
+		    delay(1.5);
+		}
+		else if ( phase == 3 ) {
+
+			goCTAFlare();
+    		ctaIsVisible = true;
+
+		    delay(3.0);
+		}
+		else if ( phase == 4 ) {
+		     
+    		if ( currentLoop < maxLoops)
+    		{
+    			ctaIsVisible = false;
+    			phase = -1;
+    			currentLoop++
+		    
+				t.to(bg1, 0.7, {x:0, y:0, alpha:1.0, scale:1.0, transformOrigin:'top left'});
+
+		   		delay(0.7);
+    		}
+		}
+    }
+
+    function goCTAFlare () {
+		t.set(ctaFlare, {x:-200});
+		t.to(ctaFlare, 1.4, {x:375, ease:Expo.easeOut})
+    }
+
+	border.onmouseover = function() {
+		if (!ctaIsVisible) return;
+		goCTAFlare();
+	}
+
+	border.onmouseout = function() {
+		if (!ctaIsVisible) return;
+	}
+	
+	border.onclick = function() {
+		clickHandler();
+	}
+
+	border.onclick = function() {
+		window.clickTag = base;
+		Enabler.exitOverride('Background Clickthrough', window.clickTag);
+	}
+
+	// utility functions
+	function hide(element) {
+		element.style.display = 'none';
+	}
+	
+	function show(element) {
+		element.style.display = 'block';
+	}
+
+	function delay(time) {
+	    t.delayedCall(time, advance);
+	    phase++;
+	}
+}
+</script>
+
+
+</body>
+</html>
+

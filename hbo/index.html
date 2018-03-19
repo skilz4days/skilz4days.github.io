@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+
+	<!-- GSAP -->
+	<script src='https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js'></script>
+	<!-- Doubleclick Studio Enabler -->
+	<script src='https://s0.2mdn.net/ads/studio/Enabler.js' type='text/javascript'></script>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+    <style type='text/css'>
+		#main{
+			display:none;
+			z-index:20;
+		}
+	</style>
+    
+    <script language='javascript'>
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			enablerReady();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerReady);
+		}
+		//Run when Enabler is ready
+		function enablerReady(){
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+			}
+    		//Enabler.setExpandingPixelOffsets(0, 0, 600, 250, false, false);
+		}
+		
+		function politeInit(){		
+			//Load Javascript
+			var extJavascript = document.createElement('script');
+			extJavascript.setAttribute('type', 'text/javascript');
+			extJavascript.setAttribute('src', Enabler.getUrl('actions.js')); 
+			document.getElementsByTagName('head')[0].appendChild(extJavascript);
+			
+			//Load CSS
+			var extCSS=document.createElement('link');
+			extCSS.setAttribute('rel', 'stylesheet');
+			extCSS.setAttribute('type', 'text/css');
+			extCSS.setAttribute('href', Enabler.getUrl('styles.css')); 
+			document.getElementsByTagName('head')[0].appendChild(extCSS);
+		}
+
+	</script>
+</head>
+
+<body>
+
+    <div id='main'>
+    	<!-- Collapsed Content -->
+        <div id='collapsed'>
+        	<div id='bg'></div>
+			<div id='gradient'></div>	
+			<div id='fighter_1a'></div>	
+			<div id='fighter_1b'></div>	
+			<div id='dust'></div>	
+			<div id='match_title'></div>	
+			<div>
+				<video id='video_1' ><source id='video_1_src' type='video/mp4'/></video>
+				<video id='video_2' ><source id='video_2_src' type='video/mp4'/></video>
+			</div>
+			<div id='mask'></div>	
+			<div id='fighter_1_name'></div>	
+			<div id='fighter_2_name'></div>	
+			<div id='vs'></div>	
+			<div id='venue'></div>	
+			<div id='logo'></div>	
+			<div id='date'></div>	
+			<div id='date_tonight'></div>	
+			<div id='time'></div>	
+			<div id='time_tonight'></div>	
+			<div id='cta'></div>
+			<div id='flash'></div>	
+        </div>
+        <!-- Expanded Content -->
+        <div id='expanded'>
+			<div id='exp_bg_full'></div>
+        	<div id='exp_non_video_container'>
+				<div id='exp_bg'></div>
+				<div id='exp_gradient'></div>	
+				<div id='exp_fighter_1a'></div>	
+				<div id='exp_fighter_1b'></div>	
+				<div id='exp_dust'></div>	
+				<div id='exp_match_title'></div>	
+				<div id='exp_mask'></div>	
+				<div id='exp_fighter_1_name'></div>	
+				<div id='exp_vs'></div>	
+				<div id='exp_venue'></div>	
+				<div id='exp_logo'></div>	
+				<div id='exp_date'></div>	
+				<div id='exp_date_tonight'></div>	
+				<div id='exp_time'></div>	
+				<div id='exp_time_tonight'></div>	
+				<!--<div id='exp_time'></div>	
+				<div id='exp_time_tonight'></div>	-->
+				<div id='exp_cta'>
+				</div>
+			</div>
+		   	<div><video id='video_exp'><source id='video_exp_src' type='video/mp4'/></video></div>
+        </div>
+		<div id='click_area'></div>
+		<div id='border'></div>	
+		<div id='expand_btn'></div>
+		<div id='close_btn'></div>
+    </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF=8' />
+<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+<meta name='ad.size' content='width=300,height=600' />
+<script type="text/javascript"> var clickTag = "http://www.google.com";</script>
+<title></title>
+
+
+<!-- CSS -->
+<style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+body {
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+img{
+	display:block;
+	-webkit-backface-visibility: hidden;
+}
+a {
+    text-decoration: none;
+}
+sup{
+    position: absolute;
+    vertical-align: super;
+}
+#main {
+	width: 300px;
+	height: 600px;
+	background-color: #000;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+.main div {
+	position: absolute;
+}
+#border{
+	width: 298px;
+	height: 598px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+	cursor: pointer; cursor: hand;
+}
+/*masked text fields*/
+#cta {
+	overflow: hidden;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- div layering -->
+<div id='main' class='main'>
+	<a href='javascript:window.open(window.clickTag)'>
+		<div id='banner'>
+			<div id='bg3'><img src='bg3.jpg' id='bg3_img'/></div>
+			<div id='bg2'><img src='bg2.jpg' id='bg2_img'/></div>
+			<div id='bg1'><img src='bg1.jpg' id='bg1_img'/></div>
+			<div id='woman'><img src='woman.png' id='woman_img' /></div>	
+			<div id='copy1a'><img src='copy1a.png' id='copy1a_img' /></div>	
+			<div id='copy1b'><img src='copy1b.png' id='copy1b_img' /></div>	
+			<div id='copy1c'><img src='copy1c.png' id='copy1c_img' /></div>	
+			<div id='copy2a'><img src='copy2a.png' id='copy2a_img' /></div>	
+			<div id='copy2b'><img src='copy2b.png' id='copy2b_img' /></div>	
+			<div id='copy2c'><img src='copy2c.png' id='copy2c_img' /></div>	
+			<div id='copy2d'><img src='copy2d.png' id='copy2d_img' /></div>	
+			<div id='copy3a'><img src='copy3a.png' id='copy3a_img' /></div>	
+			<div id='copy3b'><img src='copy3b.png' id='copy3b_img' /></div>	
+			<div id='copy4a'><img src='copy4a.png' id='copy4a_img' /></div>	
+			<div id='copy4b'><img src='copy4b.png' id='copy4b_img' /></div>	
+			<div id='copy4c'><img src='copy4c.png' id='copy4c_img' /></div>	
+			<div id='cta'>
+				<div id='cta_base'><img src='cta_base.png' id='cta_base_img' /></div>
+				<div id='cta_flare'><img src='cta_flare.png' id='cta_flare_img' /></div>
+			</div>
+			<div id='logo'><img src='logo.png' id='logo_img'/></div>
+			<div id='border'></div>
+		</div>
+	</a>
+</div>
+
+
+<!-- javascript animation includes -->
+<script src="CSSPlugin.min.js"></script>
+<script src="EasePack.min.js"></script>
+<script src="TweenLite.min.js"></script>
+
+<!-- assure images are all preloaded -->
+<script type='text/javascript'>
+var main =  document.getElementById('main');
+main.style.display = 'none';
+var imageIdList = new Array ( 	
+								'bg1_img',
+								'bg2_img',
+								'bg3_img',
+								'woman_img',
+								'logo_img',
+								'copy1a_img',
+								'copy1b_img',
+								'copy1c_img',
+								'copy2a_img',
+								'copy2b_img',
+								'copy2c_img',
+								'copy2d_img',
+								'copy3a_img',
+								'copy3b_img',
+								'copy4a_img',
+								'copy4b_img',
+								'copy4c_img',
+								'cta_base_img',
+								'cta_flare_img'
+							);
+var checkLoadInterval = setInterval( checkLoad, 50 );
+function checkLoad () {
+	var totalImages = imageIdList.length;
+	var imageLoadCount = 0;
+	for (;totalImages--;) {
+		var theImage = document.getElementById(imageIdList[totalImages]);
+		var rh = theImage.naturalHeight;
+		if (rh) {
+			imageLoadCount++;
+		}
+	}
+	if ( imageLoadCount >= imageIdList.length ) {
+		clearInterval( checkLoadInterval );
+		initAnimation();
+	}
+}
+
+function initAnimation () {
+
+	// define variables
+	var t = TweenLite;
+	var stageWidth = 300;
+	var stageHeight = 600;
+	var phase = 0;
+	var frameCount = 0;
+	var transitionTime = 1;
+	var ctaIsVisible = false;
+	var maxLoops = 1;
+	var currentLoop = 1;
+	var textOffset = 7;
+	var textCasc = 0.4;
+	var textZoomTime = 1.3;
+
+	var bg1 = document.getElementById('bg1');
+	var bg2 = document.getElementById('bg2');
+	var bg3 = document.getElementById('bg3');
+	var woman = document.getElementById('woman');
+	var logo = document.getElementById('logo');
+	var copy1a = document.getElementById('copy1a');
+	var copy1b = document.getElementById('copy1b');
+	var copy1c = document.getElementById('copy1c');
+	var copy2a = document.getElementById('copy2a');
+	var copy2b = document.getElementById('copy2b');
+	var copy2c = document.getElementById('copy2c');
+	var copy2d = document.getElementById('copy2d');
+	var copy3a = document.getElementById('copy3a');
+	var copy3b = document.getElementById('copy3b');
+	var copy4a = document.getElementById('copy4a');
+	var copy4b = document.getElementById('copy4b');
+	var copy4c = document.getElementById('copy4c');
+	var cta = document.getElementById('cta');
+	var ctaBase = document.getElementById('cta_base');
+	var ctaFlare = document.getElementById('cta_flare');
+	var border = document.getElementById('border');
+
+	// initial setup
+	hide( bg1 );
+	hide( bg2 );
+	hide( bg3 );
+	hide( woman );
+	hide( logo );
+	hide( copy1a );
+	hide( copy1b );
+	hide( copy1c );
+	hide( copy2a );
+	hide( copy2b );
+	hide( copy2c );
+	hide( copy2d );
+	hide( copy3a );
+	hide( copy3b );
+	hide( copy4a );
+	hide( copy4b );
+	hide( copy4c );
+	hide( cta );
+	hide( border );
+
+	advance();
+
+	function advance () {
+		    
+		if ( phase == 0 ) {
+
+		    show( main );
+		    show( border );
+
+		    show( bg1 );
+			t.set(bg1, {x:-50, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(bg1, 6.0, {x:0, transformOrigin:'top left', ease:Linear.easeNone});
+
+		    show( logo );
+			t.set(logo, {x:0, y:0, scale:0.5, transformOrigin:'top left'});
+
+		    show( copy1a );
+			t.set(copy1a, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy1a, textZoomTime, {x:0, y:0, alpha:1.0, transformOrigin:'top left', ease:Power1.easeInOut});
+
+		    show( copy1b );
+			t.set(copy1b, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy1b, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', delay:textCasc, ease:Power1.easeInOut});
+
+		    show( copy1c );
+			t.set(copy1c, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy1c, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', delay:textCasc*2, ease:Power1.easeInOut});
+
+		    delay(4.45);
+		}
+		else if ( phase == 1 ) {
+
+			t.to(bg1, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+
+			t.to(copy1a, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+			t.to(copy1b, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+			t.to(copy1c, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+
+		    show( bg2 );
+			t.set(bg2, {x:-50, y:0, alpha:1.0, scale:0.455, transformOrigin:'top left'});
+			t.to(bg2, 10, {x:0, transformOrigin:'top left', ease:Linear.easeNone});
+
+		    show( woman );
+			t.set(woman, {x:-2, y:0, scale:0.5, alpha:0, transformOrigin:'top left'});
+			t.to(woman, 0.8, {alpha:1.0, ease:Quad.EaseInOut});
+
+		    show( copy2a );
+			t.set(copy2a, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy2a, textZoomTime, {x:0, y:0, alpha:1.0, transformOrigin:'top left', ease:Power1.easeInOut, delay:textCasc});
+
+		    show( copy2b );
+			t.set(copy2b, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy2b, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', delay:textCasc*2, ease:Power1.easeInOut});
+
+		    show( copy2c );
+			t.set(copy2c, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy2c, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', delay:textCasc*3, ease:Power1.easeInOut});
+
+		    show( copy2d );
+			t.set(copy2d, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy2d, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', delay:textCasc*4, ease:Power1.easeInOut});
+
+		    delay(4.35);
+		}
+		else if ( phase == 2 ) {
+
+			t.to(bg2, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+			t.to(woman, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+
+			t.to(copy2a, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+			t.to(copy2b, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+			t.to(copy2c, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+			t.to(copy2d, 1.0, {alpha:0.0, ease:Quad.EaseInOut});
+
+		    show( bg3 );
+			t.set(bg3, {x:0, y:0, alpha:1.0, scale:0.54, rotationZ:'0.01deg', force3D:true, transformOrigin:'top left'});
+			t.to(bg3, 6.3, {x:-stageWidth*.025, y:(-stageHeight*.025)+4, scale:0.505, rotationZ:'0.01deg', force3D:true, transformOrigin:'top left'});
+
+		    show( copy3a );
+			t.set(copy3a, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy3a, textZoomTime, {x:0, y:0, alpha:1.0, transformOrigin:'top left', ease:Power1.easeInOut, delay:textCasc});
+
+		    show( copy3b );
+			t.set(copy3b, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy3b, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', ease:Power1.easeInOut, delay:textCasc*2});
+
+		    delay(3.0);
+		}
+		else if ( phase == 3 ) {
+
+			t.to(copy3a, 0.3, {alpha:0.0, ease:Expo.EaseOut});
+			t.to(copy3b, 0.3, {alpha:0.0, ease:Expo.EaseOut});
+
+		    show( copy4a );
+			t.set(copy4a, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy4a, textZoomTime, {x:0, y:0, alpha:1.0, transformOrigin:'top left', ease:Power1.easeInOut, delay:textCasc});
+
+		    show( copy4b );
+			t.set(copy4b, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy4b, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', ease:Power1.easeInOut, delay:textCasc*2 });
+
+		    show( copy4c );
+			t.set(copy4c, {x:0, y:textOffset, alpha:0.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy4c, textZoomTime, {x:0, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left', ease:Power1.easeInOut, delay:textCasc*3 });
+
+			show(cta);
+			t.set(cta, {x:84, y:166+textOffset, width:258, height:42, alpha:0, scale:0.5, transformOrigin:'top left'});
+			t.to(cta, textZoomTime, {alpha:1, y:166, ease:Power1.easeInOut, delay:textCasc*4, overwrite:false});
+			t.set(ctaFlare, {x:-200});
+
+		    delay(2.4);
+		}
+		else if ( phase == 4 ) {
+
+			goCTAFlare();
+    		ctaIsVisible = true;
+
+		    delay(1.8);
+		}
+		else if ( phase == 5 ) {
+		     
+    		if ( currentLoop < maxLoops)
+    		{
+    			ctaIsVisible = false;
+    			phase = -1;
+    			currentLoop++
+		    
+				t.to(bg3, 0.3, {alpha:0.0, ease:Expo.EaseOut});
+				t.to(cta, 0.7, {alpha:0.0, ease:Expo.EaseOut});
+				t.to(copy4a, 0.7, {alpha:0.0, ease:Expo.EaseOut});
+				t.to(copy4b, 0.7, {alpha:0.0, ease:Expo.EaseOut});
+				t.to(copy4c, 0.7, {alpha:0.0, ease:Expo.EaseOut});
+				
+				t.to(bg1, 0.7, {x:-100, y:-100, alpha:1.0, scale:0.7, transformOrigin:'top left'});
+
+		   		delay(0.7);
+    		}
+		}
+    }
+
+    function goCTAFlare () {
+		t.set(ctaFlare, {x:-200});
+		t.to(ctaFlare, 2.4, {x:300, ease:Expo.easeOut})
+    }
+
+	border.onmouseover = function() {
+		if (!ctaIsVisible) return;
+		goCTAFlare();
+	}
+
+	border.onmouseout = function() {
+		if (!ctaIsVisible) return;
+	}
+	
+	border.onclick = function() {
+		t.to(cta, 0.6, { scale:0.5, ease:Expo.easeOut});
+	}
+
+	// utility functions
+	function hide(element) {
+		element.style.display = 'none';
+	}
+	
+	function show(element) {
+		element.style.display = 'block';
+	}
+	
+	// returns the distance from the left side of the banner to the left side of the element in question
+	function getX(element) { 
+		var mainRect = main.getBoundingClientRect();
+		var elemRect = element.getBoundingClientRect();
+		return elemRect.left - mainRect.left;
+	}
+
+	// returns the distance from the top of the banner to the top of the element in question
+	function getY(element) { 
+    	var mainRect = main.getBoundingClientRect();
+    	var elemRect = element.getBoundingClientRect();
+    	return elemRect.top - mainRect.top;
+    }
+
+	function delay(time) {
+	    t.delayedCall(time, advance);
+	    phase++;
+	}
+}
+</script>
+
+
+</body>
+</html>
+
