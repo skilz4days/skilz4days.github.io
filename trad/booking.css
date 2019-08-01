@@ -1,0 +1,157 @@
+
+
+#cover {
+	visibility:visible;
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:300px;
+	height:250px;
+	background: #000;
+}
+#container {
+	width: 300px;
+	height: 250px;
+	position: relative;
+	overflow:hidden;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+#booking-widget {
+	position: absolute;
+	left:17px;
+	top: 0px;
+	width: 205px;
+	height: 406px;
+}
+
+.city-select select {
+	background: transparent;
+	width: 90px;
+	height: 21px;
+	padding-left: 5px;
+	font-size: 12px;
+	line-height: 2;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+.city-select {
+	position: absolute;
+	left:0;
+	height:21px;
+	width:88px;
+	overflow: hidden;
+	background: url(menuArrow.png) no-repeat right #fff;
+	border: 1px solid #ccc;
+}
+
+#selectOrigin {
+	position: absolute;
+	top:68px;
+}
+
+#selectDestination {
+	position: absolute;
+	top:68px;
+	left:115px;
+}
+
+.num-select select {
+	background: transparent;
+	width: 88px;
+	height: 21px;
+	padding-left: 5px;
+	font-size: 12px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+.num-select {
+	position: absolute;
+	left:0;
+	width:88px;
+	height:21px;
+	overflow: hidden;
+	background: url(menuArrow.png) no-repeat right #fff;
+	border: 1px solid #ccc;
+}			
+
+
+
+#selectAdults {
+	position: absolute;
+	left: 115px;
+	top:152px;
+}
+
+#selectYAdults{
+	visibility:hidden;
+	position: absolute;
+	left: 130px;
+	top:321px;
+}
+
+#selectKids {
+	visibility:hidden;
+	position: absolute;
+	left: 130px;
+	top:368px;
+}
+
+.calendar input {
+	background: transparent;
+	width: 90px;
+	height: 23px;
+	padding-left: 5px;
+	font-size: 12px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	-webkit-appearance: none;
+}
+
+.calendar {
+	position: absolute;
+	left:0;
+	top:0;
+	width:90px;
+	height:23px;
+	overflow: hidden;
+	background: url(calIcon.png) no-repeat right #fff;
+}			
+
+#cal1{
+	position: absolute;
+	left:0px;
+	top:114px;
+}
+
+#cal2{
+	position: absolute;
+	left:115px;
+	top:114px;
+}			
+
+@media all and (-webkit-min-device-pixel-ratio : 1.5),
+ all and (-o-min-device-pixel-ratio: 3/2),
+ all and (min--moz-device-pixel-ratio: 1.5),
+ all and (min-device-pixel-ratio: 1.5) {
+ 
+  .city-select, .num-select{
+    background-image: url(menuArrow_2x.png);
+    background-size: 21px auto;
+  }
+   
+  .calendar {
+    background-image: url(calIcon_2x.png);
+    background-size: 31px auto;
+  
+  }  
+}

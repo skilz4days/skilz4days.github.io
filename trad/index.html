@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+<meta name='ad.size' content='width=300,height=250' />
+<title>300x250</title>
+
+
+<!-- CSS -->
+<style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+body {
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+img{
+	display:block;
+	-webkit-backface-visibility: hidden;
+}
+a {
+    text-decoration: none;
+}
+sup{
+    position: absolute;
+    vertical-align: super;
+}
+#main {
+	width: 300px;
+	height: 250px;
+	background-color: #000;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+.main div {
+	position: absolute;
+}
+#border{
+	width: 298px;
+	height: 248px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    cursor: pointer; cursor: hand;
+}
+/*masked text fields*/
+#iconmask
+{
+    width: 148px;
+    height: 148px;
+    overflow: hidden;
+    position:absolute;
+}
+#pricemask
+{
+    width: 170px;
+    height: 50px;
+    overflow: hidden;
+    position:absolute;
+}
+#pricemask2
+{
+    width: 170px;
+    height: 50px;
+    overflow: hidden;
+    position:absolute;
+}
+#gblock
+{
+    width: 6000px;
+    height: 36px;
+}
+#gradient1
+{
+    position:absolute;
+}
+#cta
+{
+	cursor: pointer; cursor: hand;
+}
+.svg
+{
+	width:300px;
+	height:250px;
+}
+</style>
+
+<link rel="stylesheet" href="booking.css">
+<link rel="stylesheet" href="pikaday.css">
+
+</head>
+
+
+<body>
+
+
+<!-- div layering -->
+<div id='main' class='main'>
+		<div id='container'>
+			<div id='cover'></div>
+			<div id='bg1'><img src='bg1.jpg' id='bg1_img'/></div>
+			<div id='logo'><img src='logo.png' id='logo_img'/></div>
+			<div id='copy1block'>
+				<div id='copy1a' class='svg'>
+					<?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 500" style="enable-background:new 0 0 600 500;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><path class="st0" d="M83.9,165.7l0.4,3.8c-8,2.3-16.5,4.7-21.8,6.1c-0.1,0.5-0.5,0.9-0.9,1l-1.6-4.9c2.7-0.7,6.1-1.5,9.8-2.4v-16.9h-8v-4.2h8v-14.6h-8.9v-4.2H83v4.2h-9v14.6h7.9v4.2H74v15.8L83.9,165.7z M109.5,177.7c0,1.8,0.3,2.1,1.7,2.1h4.7c1.4,0,1.7-1.3,1.8-8.8c1,0.8,2.8,1.5,4,1.8c-0.4,8.8-1.6,11.2-5.5,11.2h-5.7c-4.4,0-5.5-1.4-5.5-6.3v-24.7h-8.1c-1,14.8-3.2,26.7-17.5,32.9c-0.5-0.9-1.7-2.4-2.6-3.2c12.7-5.3,15-15.7,15.8-29.6h-9.4v-4.3h38v4.3h-11.9V177.7z M117.7,129v4.2H86.4V129H117.7z"/><path class="st0" d="M178.8,180h8v3.7h-60.5V180h8.1v-14.2h44.4V180z M154.1,144.1v-4.3h-27.7v-3.5h27.7v-4.2h-18.6v-3.4h18.6v-4.5l5.7,0.3c-0.1,0.5-0.5,0.8-1.3,0.9v3.2h19.6v7.6h8.6v3.5h-8.6v7.7h-19.6v4.4h27v3.5h-57.8v-3.5h26.3v-4.4h-18.9v-3.4H154.1z M138.3,157.6c-1.5,4.4-4,8.8-8.4,11.4l-3.2-2.6c4-2.2,6.7-6.2,8.1-10.2L138.3,157.6z M138.6,169.4V180h9.1v-10.6H138.6z M149.4,156.5c0.9,2.4,1.7,5.5,1.9,7.6c-2.2,0.5-3.1,0.7-4,0.8c-0.1-2.1-0.9-5.3-1.7-7.7L149.4,156.5z M161.1,169.4h-9.3V180h9.3V169.4z M158.5,132.1v4.2h15.3v-4.2H158.5z M173.8,144.1v-4.3h-15.3v4.3H173.8z M162.6,156.2c1.8,2.3,3.5,5.5,4.3,7.7l-3.9,1.3c-0.7-2.2-2.4-5.5-4-7.9L162.6,156.2z M174.5,169.4h-9.3V180h9.3V169.4z M182.7,168c-2-2.9-6.2-7.5-9.8-10.6l3.4-1.6c3.7,3.1,7.9,7.3,9.9,10.2L182.7,168z"/><path class="st0" d="M199.4,148.2c-2.2,3.9-4.5,7.5-6.9,10.6c-0.5-1.1-1.5-3.3-2.2-4.3c5.7-6.9,11.1-18.3,14.5-29.8l5.2,1.6c-0.2,0.5-0.7,0.7-1.5,0.7c-1.4,4.4-3.2,8.8-5.1,13.1l1.5,0.5c-0.1,0.5-0.5,0.7-1.2,0.9v44.2h-4.3V148.2z M233.3,125.2c-0.1,0.5-0.5,0.8-1.1,0.9c5,6.9,14,14.6,21.7,18.7c-0.9,1.1-1.9,2.6-2.6,4c-7.9-4.7-16.9-12.5-21.7-19.4c-4.3,6.7-12.6,14.7-21.4,19.9c-0.5-1.1-1.6-2.6-2.4-3.6c8.8-4.9,17.5-13.5,21.6-20.7L233.3,125.2z M249.1,153.2v27.7c0,4.5-2,4.8-9.3,4.8c-0.1-1.2-0.7-2.8-1.3-3.9c1.3,0,2.6,0.1,3.5,0.1c2.6,0,3,0,3-1v-10.5h-7.8v14.5h-3.5v-14.5h-7.4v14.5h-3.5v-14.5h-7.3v15.3h-4.1v-32.4H249.1z M215.4,166.4h7.3v-9.3h-7.3V166.4z M218.1,142.9h23.8v3.9h-23.8V142.9z M226.2,166.4h7.4v-9.3h-7.4V166.4z M237.2,166.4h7.8v-9.3h-7.8V166.4z"/><path class="st0" d="M275.6,168.3c4.5-0.4,9.1-0.8,13.7-1.3v3.6c-4.6,0.5-9.3,1.1-13.7,1.5v9c0,4.3-2.2,4.5-10.8,4.5c-0.2-1.1-0.8-2.6-1.3-3.8c3.1,0.1,5.9,0.1,6.8,0.1c0.8-0.1,1.1-0.3,1.1-1v-8.4c-4.5,0.5-8.6,0.9-11.8,1.2c-0.1,0.5-0.5,0.9-1,0.9l-1.2-4.8c3.7-0.3,8.6-0.7,14-1.2v-4.2l1.8,0.1c2.2-1.4,4.3-3.1,6.2-4.8h-19.8v-3.6h23.8l0.7-0.2l3.2,2.1c-0.2,0.3-0.6,0.5-1,0.5c-2.6,2.7-6.8,6-10.6,8.3V168.3z M288.8,131.5v3.9h-31.3v-3.9h13.8v-7.3l5.6,0.4c-0.1,0.5-0.4,0.8-1.2,0.9v6H288.8z M284.8,152.4h-23.5v-13.3h23.5V152.4z M265.5,142.5v6.5h15v-6.5H265.5z M318.5,141h-3.8c-1.9,10.8-4.8,19.9-9.3,27.3c3.3,5.5,7.7,10.2,13.5,13.5c-0.9,0.9-2.4,2.8-3.1,4c-5.6-3.5-9.9-8.2-13.1-13.5c-4.3,5.7-9.7,10.2-16.7,13.5c-0.7-1-2-2.7-3-3.6c7.4-3.4,13-8.1,17.3-14.4c-3.1-6.1-5.1-12.8-6.4-19.1c-1.4,3.1-2.9,5.9-4.5,8.2c-0.7-0.9-2.2-2.5-3.2-3.3c4.7-6.6,8.1-18.1,10.1-29.6l5.8,1.3c-0.1,0.5-0.6,0.7-1.5,0.7c-0.7,3.6-1.6,7.3-2.6,10.8h20.4V141z M296.8,141c-0.1,0.3-0.2,0.6-0.3,0.9c1.2,7.1,3.1,14.7,6.3,21.6c3.4-6.3,5.7-13.8,7.2-22.6H296.8z"/><path class="st0" d="M345.9,138.1l2.5,0.7l-0.4,0.9c-0.9,11.7-3,21.1-6.3,28.4c3.2,2.5,6,4.9,7.8,7.2l-2.7,3.6c-1.6-2.1-4.1-4.5-7-6.9c-3.4,6.1-7.8,10.6-13,13.8c-0.6-1.1-1.8-2.7-2.8-3.6c4.9-2.6,9.1-6.9,12.4-12.9c-2.4-1.8-5-3.6-7.5-5.1l-0.8,2.9l-3.7-2c1.6-5.8,3.7-14.2,5.6-22.7h-6.6v-4.2h7.5c1.1-4.9,2-9.7,2.8-13.9l5.4,0.7c-0.1,0.5-0.5,0.7-1.3,0.8c-0.7,3.8-1.6,8.1-2.6,12.5h10.1L345.9,138.1z M334,142.4c-1.4,6.1-2.9,12.3-4.3,17.8c2.8,1.5,5.6,3.4,8.3,5.2c2.6-6.1,4.5-13.8,5.5-23H334z M384.2,153.8v4.3h-15.8v21.8c0,5.1-2,5.9-13.6,5.7c-0.3-1.2-1-3.1-1.6-4.4c3.2,0.1,6,0.1,7.9,0.1c2.2,0,2.9,0,2.9-1.4v-21.9h-16.1v-4.3h16.1v-11.2l2.2,0.1c3.4-2.9,7-7.1,9.7-10.8h-25.3v-4.2h28.6l0.9-0.3l3.5,2.2c-0.2,0.3-0.7,0.5-1.1,0.7c-3.4,4.9-9.1,11.2-14.1,15.2v8.2H384.2z"/><path class="st0" d="M409.9,128.7v43.7h-14.5v5.3h-4.2v-49H409.9z M405.7,132.8h-10.3v15.5h10.3V132.8z M395.4,168.3h10.3v-16h-10.3V168.3z M432.5,145.6h17.3v4H411v-4h17.1v-9h-14.3v-4h14.3v-8.2l5.7,0.3c-0.1,0.5-0.5,0.8-1.3,0.9v6.9h14.7v4h-14.7V145.6z M443,151.5c-0.1,0.5-0.4,0.8-1.2,0.9v5.7h8v4h-8v18.5c0,2.7-0.6,4-2.6,4.6c-2,0.7-5.3,0.7-10.8,0.7c-0.2-1.2-0.9-3-1.5-4.2c2.5,0.1,4.9,0.1,6.6,0.1c3.7,0,4,0,4-1.4v-18.4h-26.1v-4h26.1v-6.9L443,151.5z M424.2,178.8c-1.5-3.3-5.2-8.3-8.6-11.9l3.5-2.1c3.5,3.4,7.3,8.3,8.9,11.6L424.2,178.8z"/><path class="st0" d="M468,148.4c1.7,2.4,6.3,9.8,7.3,11.5l-2.4,3.3c-0.9-2.1-3.1-6.4-4.9-9.7v31.9h-4.1v-32.1c-2.1,7.5-4.9,14.8-7.8,19.3c-0.5-1.1-1.6-2.8-2.2-3.7c3.8-5.7,7.7-16.6,9.5-25.9h-8.1V139h8.7v-14.7l5.3,0.4c-0.1,0.4-0.4,0.7-1.2,0.9V139h7.2v4.1H468V148.4z M498.7,162.2c0.7,3.7,1.6,7,2.6,9.8c2.4-2.6,4.3-5.4,5.6-8.4l4.6,1.6c-0.1,0.4-0.5,0.6-1.2,0.6c-1.8,3.6-4.3,7-7.4,10c2,3.9,4.3,6.1,7,6.1c2,0,2.7-1.6,3.1-7.9c0.9,0.9,2.2,1.8,3.1,2.1c-0.8,7.5-2.2,9.8-6.5,9.8c-4.1-0.1-7.2-2.7-9.7-7.3c-3.5,2.7-7.5,5.1-12,7c-0.5-0.8-1.6-2.2-2.4-2.9c4.9-1.9,9.2-4.5,12.7-7.6c-1.4-3.5-2.5-7.9-3.4-12.7h-11c-0.1,1.4-0.3,2.8-0.5,4.2c3.4,2,7.4,4.8,9.5,6.7l-2.5,3.1c-1.7-1.6-4.7-3.9-7.7-5.9c-1.3,5.9-3.7,11.5-8.7,15.2c-0.6-0.9-1.8-2.2-2.7-2.9c6.1-4.4,8-12.1,8.6-20.3h-4.5v-3.7h18.9c-1.5-9.8-2.2-21.6-2.2-34.2l5.3,0.3c-0.1,0.5-0.4,0.8-1.3,0.9c-0.1,12.2,0.7,23.6,2.2,32.9h9.7c-1.7-1.4-4.1-3-6.2-4.2l2.2-2.2c2.6,1.3,5.7,3.3,7.3,4.8l-1.4,1.5h5.3v3.7H498.7z M474.4,149.5l2.3-0.1c1.5-1.9,3.1-4.3,4.7-6.8c-1.7-2.2-4.7-4.9-7.2-6.9l1.9-2.4c0.5,0.4,1.1,0.8,1.6,1.2c1.5-2.9,3.3-6.8,4.2-9.6l4.2,1.8c-0.2,0.4-0.7,0.5-1.3,0.5c-1.2,2.6-3.2,6.4-4.9,9.1c1.2,1.1,2.3,2.2,3.2,3.2c1.6-2.8,3.2-5.7,4.3-8.1l4.1,2c-0.2,0.3-0.7,0.5-1.4,0.5c-2.4,4.4-6.2,10.4-9.6,15l7.2-0.5c-0.6-1.5-1.3-3.1-2-4.4l2.8-1.1c1.8,3,3.5,7.1,3.9,9.6l-3,1.3c-0.1-0.7-0.3-1.6-0.6-2.5c-4.7,0.5-9.1,1-12.2,1.3c-0.1,0.5-0.4,0.7-0.8,0.9L474.4,149.5z M499.6,148.7c1.3-1.7,2.8-3.9,4.2-6.1c-1.7-2.2-4.7-4.9-7.2-6.9l1.9-2.4l1.6,1.2c1.6-2.9,3.4-6.8,4.3-9.6l4.2,1.8c-0.2,0.4-0.7,0.5-1.3,0.5c-1.2,2.6-3.2,6.3-4.9,9c1.2,1.1,2.4,2.2,3.2,3.2c1.7-2.8,3.2-5.7,4.3-8.1l4,2c-0.1,0.3-0.7,0.5-1.3,0.5c-2.4,4.2-6,10-9.2,14.4c2.4-0.1,5-0.3,7.8-0.5c-0.7-1.5-1.4-2.8-2.1-4.1l2.8-1.1c1.8,3,3.7,7,4.3,9.6l-3,1.5c-0.2-0.9-0.5-1.9-0.9-3c-4.8,0.6-9.4,1.1-12.5,1.3c-0.1,0.5-0.5,0.8-0.9,0.9l-1.4-4.2L499.6,148.7z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+				</div>	
+				<div id='copy1b' class='svg'>
+					<?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 500" style="enable-background:new 0 0 600 500;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><path class="st0" d="M120.8,240.3v4.4H88l1.1,0.3c-0.2,0.4-0.8,0.7-1.6,0.7c-2.4,5.7-6.2,13.7-9.7,19.7c9.6-0.3,21-0.6,32.1-1c-3-4.2-6.3-8.5-9.5-12.1l4-1.9c6.1,6.5,12.7,15.4,15.7,21.2l-4.3,2.4c-0.9-1.7-1.9-3.6-3.2-5.6c-17,0.9-35,1.6-46.3,2c-0.1,0.5-0.5,0.8-1.1,0.9l-1.8-5.5l9.4-0.2c3.4-5.9,7.4-14.3,9.8-20.9H61.1v-4.4h27.3v-13.3H66.3v-4.4h22.1v-10.5l5.9,0.4c-0.1,0.5-0.5,0.8-1.3,0.9v9.2h22.8v4.4H93v13.3H120.8z"/><path class="st0" d="M135.2,243.3c-2.4,3.1-4.9,5.9-7.2,8.3c-0.5-0.9-1.7-2.8-2.4-3.8c5.3-5,11.5-13.3,15.4-21.1l4.9,1.9c-0.3,0.5-0.9,0.7-1.5,0.6c-1.4,2.7-3.2,5.5-5,8.2l1.2,0.4c-0.1,0.4-0.5,0.7-1.3,0.8v34.9h-4.1V243.3z M144.6,214.2c-0.3,0.6-0.9,0.6-1.4,0.5c-3.5,4.6-9.8,10.7-14.9,14.8c-0.5-0.9-1.7-2.4-2.5-3.2c4.9-3.7,10.8-9.5,14-14.1L144.6,214.2z M186.7,251v4h-10.1v13.5c0,5-2.6,5.1-12.6,5.1c-0.2-1.3-0.9-2.9-1.5-4.1c2.3,0.1,4.5,0.1,6,0.1c3.2,0,3.7,0,3.7-1.3V255h-27.3v-4h27.3v-6.1h-25.8v-3.8h39.2v3.8h-7.7c-0.1,0.3-0.5,0.5-1.2,0.7v5.4H186.7z M181.2,214.2V236h-30.9v-21.8H181.2z M159.1,268.2c-1.6-2.7-5.1-6.8-8.2-9.7l3-2c3.2,2.8,6.8,6.7,8.5,9.4L159.1,268.2z M176.8,223.4v-5.7h-22.3v5.7H176.8z M176.8,232.5v-5.9h-22.3v5.9H176.8z"/><path class="st0" d="M210.5,228v-2.2c-5.3,3-11,5.5-16.2,7.1c-0.7-1.1-1.9-2.6-2.8-3.5c8.5-2.2,18.3-6.7,24.6-11.8h-12.4V214h21.7c5.7,6.7,17.5,12.3,27.8,14.8c-1.1,0.9-2.6,2.4-3.3,3.6c-5.3-1.6-10.9-3.9-16-6.7v2.3H210.5z M204.9,259.5c-1.6,5.3-4.1,10-9.8,12.6l-3.4-2.5c5.1-2.2,8.1-6.5,9.4-11.4L204.9,259.5z M219.4,231.9v19.6c0,3.8-1.8,4-8.4,4c-0.2-1-0.9-2.3-1.3-3.2c5.6,0.1,5.7,0.1,5.7-0.8v-16.4h-12.6v21.3h-4v-24.5H219.4z M205.5,244c2.8,1.1,6.3,2.8,8.1,4.3l-1.9,2.3c-1.8-1.5-5.3-3.4-8.1-4.6L205.5,244z M205.7,236.9c2.8,0.9,6.2,2.6,8,4l-1.9,2.3c-1.7-1.3-5.1-3.1-8-4.2L205.7,236.9z M213.7,266.9c0,1.6,0.6,1.9,4.1,1.9H230c2.8,0,3.3-0.8,3.5-6.4c0.9,0.7,2.7,1.3,3.9,1.5c-0.5,7-1.9,8.6-7,8.6h-12.9c-6.6,0-8.2-1.1-8.2-5.6V258l5.7,0.4c-0.1,0.5-0.4,0.8-1.2,0.9V266.9z M222.8,217.6h-1.3c-2.5,2.5-5.6,4.9-9,7h19.6C228.5,222.5,225.3,220.1,222.8,217.6L222.8,217.6z M218.7,254.5c3.7,1.6,8.1,4.4,10.4,6.5l-2.9,2.7c-2.1-2.1-6.5-5-10.2-6.8L218.7,254.5z M234.4,232.1c-0.2,0.5-0.6,0.8-1.4,0.7c-1.4,2.4-4.4,6.9-6.9,10.4c3.4,4,7,8.8,8.8,11.9l-3.4,1.7c-1.8-3.5-5.6-8.9-9.5-13.5c3-4.1,6.2-9.2,8-12.5L234.4,232.1z M246,232.3c-0.2,0.5-0.6,0.7-1.4,0.7c-1.4,2.4-4.5,6.9-7,10.4c3.5,3.8,7.4,8.8,9.2,11.8l-3.4,1.7c-1.9-3.5-5.9-8.8-10.1-13.5c3.1-4,6.5-9.2,8.2-12.4L246,232.3z M249,271.7c-2.1-3.6-7.2-8.5-11.9-11.9l3.5-2.2c4.7,3.2,9.9,8,12.1,11.7L249,271.7z"/><path class="st0" d="M304.3,217.7l3.2,1.8c-0.2,0.3-0.5,0.5-0.8,0.6c-8.6,14.9-28.2,24.5-45.4,28.3c-0.5-1.1-1.4-3-2.2-4c8.5-1.6,17.8-4.8,25.8-9.4c-2.5-2-6.3-4.4-9.5-5.9l3-2.6c3.5,1.6,7.7,4.2,10.3,6.2c4.8-3.1,8.9-6.8,11.9-10.9h-19.8c-4.8,3.6-10.6,7.1-17.5,10c-0.7-1.1-2-2.6-3-3.3c11.4-4.5,20.2-10.9,24.9-16.4l5.8,1.2c-0.1,0.5-0.6,0.7-1.4,0.8c-1.2,1.3-2.6,2.6-4,3.9h18.1L304.3,217.7z M313.5,241.2l0.8-0.3c2.5,1.3,2.8,1.5,3.1,1.6c-0.1,0.3-0.4,0.5-0.7,0.7c-8.5,18.8-29.4,27.3-50.9,30.5c-0.3-1.3-1.2-3.1-1.9-4.1c10.4-1.3,21-4.1,29.7-8.7c-2.8-2.6-7.2-5.6-11-7.7l3.3-2.5c3.9,2.1,8.7,5.3,11.6,7.9c5.6-3.6,10.2-8.1,13.3-13.6h-20.2c-5.7,4-12.9,7.9-21.4,11.2c-0.6-1.1-1.8-2.6-2.8-3.4c13.7-4.8,24-11.7,29.4-17.9l5.8,1.2c-0.2,0.5-0.7,0.7-1.5,0.8c-1.4,1.4-2.9,2.8-4.5,4.2H313.5z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+				</div>	
+				<div id='copy1c' class='svg'>
+					<?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 500" style="enable-background:new 0 0 600 500;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><path class="st0" d="M66.8,313.5c-0.2,6.3-1.1,13.3-3.9,17.5l-3.2-2c2.4-3.7,3.4-10.1,3.5-16L66.8,313.5z M68.8,300l5.5,0.4c-0.1,0.5-0.5,0.7-1.3,0.9v60h-4.2V300z M102.3,346.9v9.1h19.1v3.8H77.9V356h20v-9.1H82.6v-3.6H98v-5.1c-0.5-1-1.4-2.5-2.3-3.4c0.9-0.3,1.7-0.7,2.6-1.1H84.1v3.3h-3.9v-16.2l-3.1,1.5c-0.5-2.6-1.9-6.9-3.2-10.2l3.1-1.2c1.3,2.8,2.6,6.5,3.2,9v-16.8h19.3v3.5h-6.8v5.3h6.4v12.7h-6.4v5.5h7.8v2.2c2.8-1.8,5.4-4.2,7.6-7c-2.5-5.1-4.3-11-5.6-17.4l3.3-0.7c1.1,5.2,2.6,10.2,4.7,14.5c2.4-4,4.1-8.8,5.2-14.5h-14.5v-3.5h16.1l0.7-0.1l2.3,0.7c-0.1,0.3-0.2,0.5-0.3,0.8c-1.3,8.5-3.8,15.3-7.3,20.7c2.4,3.9,5.4,7.1,8.9,9.1c-0.9,0.8-2.2,2.4-2.9,3.4c-3.4-2.2-6.2-5.3-8.5-9.2c-2.8,3.4-6.1,6-9.9,8l3.2,0.2c-0.1,0.5-0.4,0.7-1.2,0.9v5.1h15.4v3.6H102.3z M89.2,306.6h-5.1v5.3h5.1V306.6z M95.5,321.4v-6.3H84.1v6.3H95.5z M84.1,324.6v5.5h5.1v-5.5H84.1z"/><path class="st0" d="M135.2,331.2c-2.4,3.1-4.9,5.9-7.2,8.3c-0.5-0.9-1.7-2.8-2.4-3.8c5.3-5,11.5-13.3,15.4-21.1l4.9,1.9c-0.3,0.5-0.9,0.7-1.5,0.6c-1.4,2.7-3.2,5.5-5,8.2l1.2,0.4c-0.1,0.4-0.5,0.7-1.3,0.8v34.9h-4.1V331.2z M144.6,302.1c-0.3,0.6-0.9,0.6-1.4,0.5c-3.5,4.6-9.8,10.7-14.9,14.8c-0.5-0.9-1.7-2.4-2.5-3.2c4.9-3.7,10.8-9.5,14-14.1L144.6,302.1z M186.7,338.9v4h-10.1v13.5c0,5-2.6,5.1-12.6,5.1c-0.2-1.3-0.9-2.9-1.5-4.1c2.3,0.1,4.5,0.1,6,0.1c3.2,0,3.7,0,3.7-1.3v-13.4h-27.3v-4h27.3v-6.1h-25.8V329h39.2v3.8h-7.7c-0.1,0.3-0.5,0.5-1.2,0.7v5.4H186.7z M181.2,302.1v21.8h-30.9v-21.8H181.2z M159.1,356.1c-1.6-2.7-5.1-6.8-8.2-9.7l3-2c3.2,2.8,6.8,6.7,8.5,9.4L159.1,356.1z M176.8,311.2v-5.7h-22.3v5.7H176.8z M176.8,320.4v-5.9h-22.3v5.9H176.8z"/><path class="st0" d="M210.5,315.9v-2.2c-5.3,3-11,5.5-16.2,7.1c-0.7-1.1-1.9-2.6-2.8-3.5c8.5-2.2,18.3-6.7,24.6-11.8h-12.4v-3.6h21.7c5.7,6.7,17.5,12.3,27.8,14.8c-1.1,0.9-2.6,2.4-3.3,3.6c-5.3-1.6-10.9-3.9-16-6.7v2.3H210.5z M204.9,347.3c-1.6,5.3-4.1,10-9.8,12.6l-3.4-2.5c5.1-2.2,8.1-6.5,9.4-11.4L204.9,347.3z M219.4,319.8v19.6c0,3.8-1.8,4-8.4,4c-0.2-1-0.9-2.3-1.3-3.2c5.6,0.1,5.7,0.1,5.7-0.8v-16.4h-12.6v21.3h-4v-24.5H219.4z M205.5,331.8c2.8,1.1,6.3,2.8,8.1,4.3l-1.9,2.3c-1.8-1.5-5.3-3.4-8.1-4.6L205.5,331.8z M205.7,324.8c2.8,0.9,6.2,2.6,8,4l-1.9,2.3c-1.7-1.3-5.1-3.1-8-4.2L205.7,324.8z M213.7,354.7c0,1.6,0.6,1.9,4.1,1.9H230c2.8,0,3.3-0.8,3.5-6.4c0.9,0.7,2.7,1.3,3.9,1.5c-0.5,7-1.9,8.6-7,8.6h-12.9c-6.6,0-8.2-1.1-8.2-5.6v-8.9l5.7,0.4c-0.1,0.5-0.4,0.8-1.2,0.9V354.7z M222.8,305.5h-1.3c-2.5,2.5-5.6,4.9-9,7h19.6C228.5,310.4,225.3,308,222.8,305.5L222.8,305.5z M218.7,342.4c3.7,1.6,8.1,4.4,10.4,6.5l-2.9,2.7c-2.1-2.1-6.5-5-10.2-6.8L218.7,342.4z M234.4,319.9c-0.2,0.5-0.6,0.8-1.4,0.7c-1.4,2.4-4.4,6.9-6.9,10.4c3.4,4,7,8.8,8.8,11.9l-3.4,1.7c-1.8-3.5-5.6-8.9-9.5-13.5c3-4.1,6.2-9.2,8-12.5L234.4,319.9z M246,320.1c-0.2,0.5-0.6,0.7-1.4,0.7c-1.4,2.4-4.5,6.9-7,10.4c3.5,3.8,7.4,8.8,9.2,11.8l-3.4,1.7c-1.9-3.5-5.9-8.8-10.1-13.5c3.1-4,6.5-9.2,8.2-12.4L246,320.1z M249,359.6c-2.1-3.6-7.2-8.5-11.9-11.9l3.5-2.2c4.7,3.2,9.9,8,12.1,11.7L249,359.6z"/><path class="st0" d="M304.3,305.6l3.2,1.8c-0.2,0.3-0.5,0.5-0.8,0.6c-8.6,14.9-28.2,24.5-45.4,28.3c-0.5-1.1-1.4-3-2.2-4c8.5-1.6,17.8-4.8,25.8-9.4c-2.5-2-6.3-4.4-9.5-5.9l3-2.6c3.5,1.6,7.7,4.2,10.3,6.2c4.8-3.1,8.9-6.8,11.9-10.9h-19.8c-4.8,3.6-10.6,7.1-17.5,10c-0.7-1.1-2-2.6-3-3.3c11.4-4.5,20.2-10.9,24.9-16.4l5.8,1.2c-0.1,0.5-0.6,0.7-1.4,0.8c-1.2,1.3-2.6,2.6-4,3.9h18.1L304.3,305.6z M313.5,329.1l0.8-0.3c2.5,1.3,2.8,1.5,3.1,1.6c-0.1,0.3-0.4,0.5-0.7,0.7c-8.5,18.8-29.4,27.3-50.9,30.5c-0.3-1.3-1.2-3.1-1.9-4.1c10.4-1.3,21-4.1,29.7-8.7c-2.8-2.6-7.2-5.6-11-7.7l3.3-2.5c3.9,2.1,8.7,5.3,11.6,7.9c5.6-3.6,10.2-8.1,13.3-13.6h-20.2c-5.7,4-12.9,7.9-21.4,11.2c-0.6-1.1-1.8-2.6-2.8-3.4c13.7-4.8,24-11.7,29.4-17.9l5.8,1.2c-0.2,0.5-0.7,0.7-1.5,0.8c-1.4,1.4-2.9,2.8-4.5,4.2H313.5z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+				</div>	
+			</div>
+			<div id='copy2block'>
+				<div id='copy2a'><img src='copy2a.png' id='copy2a_img' /></div>	
+			</div>
+			<div id='copy3block'>
+				<div id='copy3a'><img src='copy3a.png' id='copy3a_img' /></div>	
+			</div>
+			<div id='pricebox'><img src='pricebox.png' id='pricebox_img' /></div>
+			<div id='pricebox2'><img src='pricebox2.png' id='pricebox2_img' /></div>
+			<div id='pricemask'>
+				<div id='copy2b'><img src='copy2b.png' id='copy2b_img' /></div>	
+				<div id='copy3b'><img src='copy3b.png' id='copy3b_img' /></div>	
+			</div>
+			<div id='pricemask2'>
+				<div id='copy2c'><img src='copy2c.png' id='copy2c_img' /></div>	
+				<div id='copy3c'><img src='copy3c.png' id='copy3c_img' /></div>	
+			</div>
+			<div id='iconbox'><img src='iconbox.png' id='iconbox_img' /></div>
+			<div id='iconmask'>
+				<div id='icon1'><img src='icon1.png' id='icon1_img' /></div>
+				<div id='icon2'><img src='icon2.png' id='icon2_img' /></div>
+			</div>
+			<div id='gblock'>
+				<div id='gradient1'><img src='gradient.png' id='gradient1_img' /></div>
+			</div>
+			<div id='border'></div>
+			<div id='bookingbg'><img src='bookingBg.png' id='bookingbg_img' /></div>
+			<div id='booking-widget'>
+
+				<div id='calContainer'></div>
+
+				<div class="city-select" id="selectOrigin">
+				   <select id="cityFrom">
+				      <option>香港</option>
+				   </select>
+				</div>
+
+				<div class="calendar" id="cal1">
+					<input type="text" id="depart">
+				</div>
+
+				<div class="city-select" id="selectDestination">
+				   <select id="cityTo">
+				      <option selected="selected">倫敦</option>
+				   </select>
+				</div>
+
+				<div class="calendar" id="cal2">
+					<input type="text" id="return">
+				</div>		
+
+				<div class="num-select" id="selectAdults">
+				   <select id="adults">
+				   	  <option>0</option>
+				   	  <option selected="selected">1</option>
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				      <option>6</option>
+				      <option>7</option>
+				      <option>8</option>
+				      <option>9</option>
+				      <option>10</option>
+				   </select>
+				</div>
+				<div class="num-select" id="selectYAdults">
+				   <select id="yadults">
+				   	  <option selected="selected">0</option>
+				   	  <option>1</option>				   	  
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				      <option>6</option>
+				      <option>7</option>
+				      <option>8</option>
+				   </select>
+				</div>
+				
+				<div class="num-select" id="selectKids">
+				   <select id="kids">
+				   	  <option selected="selected">0</option>
+				   	  <option>1</option>				   	  
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				      <option>6</option>
+				      <option>7</option>
+				      <option>8</option>
+				   </select>
+				</div>
+
+
+			</div>
+			<div id='cta'>
+				<div id='cta_border'><img src='cta_border.png' id='cta_border_img' /></div>
+				<div id='cta_over'><img src='cta_over.png' id='cta_over_img' /></div>
+			</div>
+
+		</div>
+</div>
+
+
+<!-- javascript animation includes -->
+<script src="CSSPlugin.min.js"></script>
+<script src="EasePack.min.js"></script>
+<script src="TweenLite.min.js"></script>
+<script src="pikaday.js"></script>
+<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+<!-- assure images are all preloaded -->
+<script type='text/javascript'>
+var main =  document.getElementById('main');
+main.style.display = 'none';
+
+var imageIdList = new Array ( 	
+								'bg1_img',
+								'logo_img',
+								'copy2a_img',
+								'copy2b_img',
+								'copy2c_img',
+								'copy3a_img',
+								'copy3b_img',
+								'copy3c_img',
+								'pricebox_img',
+								'pricebox2_img',
+								'iconbox_img',
+								'icon1_img',
+								'icon2_img',
+								'gradient1_img',
+								'cta_border_img',
+								'cta_over_img',
+								'bookingbg_img'
+							);
+var checkLoadInterval = setInterval( checkLoad, 50 );
+function checkLoad () {
+	var totalImages = imageIdList.length;
+	var imageLoadCount = 0;
+	for (;totalImages--;) {
+		var theImage = document.getElementById(imageIdList[totalImages]);
+		var rh = theImage.naturalHeight;
+		if (rh) {
+			imageLoadCount++;
+		}
+	}
+	if ( imageLoadCount >= imageIdList.length ) {
+		clearInterval( checkLoadInterval );
+		initAnimation();
+	}
+}
+
+function initAnimation () {
+
+	// define variables
+	var t = TweenLite;
+	var stageWidth = 300;
+	var stageHeight = 250;
+	var phase = 0;
+	var frameCount = 0;
+	var transitionTime = 1;
+	var ctaIsVisible = false;
+	var maxLoops = 1;
+	var currentLoop = 1;
+	var textWidth = stageWidth;
+	var textZoomTime = 1.0;
+	var textScale = 6.0;
+	var textCasc = 0.2;
+	var priceCasc = 0.22;
+	var panTime = 0.75;
+
+	var bg1 = document.getElementById('bg1');
+	var logo = document.getElementById('logo');
+	var copy1block = document.getElementById('copy1block');
+	var copy2block = document.getElementById('copy2block');
+	var copy3block = document.getElementById('copy3block');
+	var copy4block = document.getElementById('copy4block');
+	var copy1a = document.getElementById('copy1a');
+	var copy1b = document.getElementById('copy1b');
+	var copy1c = document.getElementById('copy1c');
+	var copy2a = document.getElementById('copy2a');
+	var copy2b = document.getElementById('copy2b');
+	var copy2c = document.getElementById('copy2c');
+	var copy3a = document.getElementById('copy3a');
+	var copy3b = document.getElementById('copy3b');
+	var copy3c = document.getElementById('copy3c');
+	var iconmask = document.getElementById('iconmask');
+	var iconbox = document.getElementById('iconbox');
+	var icon1 = document.getElementById('icon1');
+	var icon2 = document.getElementById('icon2');
+	var pricebox = document.getElementById('pricebox');
+	var pricebox2 = document.getElementById('pricebox2');
+	var pricemask = document.getElementById('pricemask');
+	var pricemask2 = document.getElementById('pricemask2');
+	var gblock = document.getElementById('gblock');
+	var gradient1 = document.getElementById('gradient1');
+	var cta = document.getElementById('cta');
+	var ctaBorder = document.getElementById('cta_border');
+	var ctaOver = document.getElementById('cta_over');
+	var cover = document.getElementById('cover');
+	var bookingBg = document.getElementById('bookingbg');
+	var bookingWidget = document.getElementById('booking-widget');
+	var border = document.getElementById('border');
+
+	// initial setup
+	hide( bg1 );
+	hide( logo );
+	hide( gblock );
+	hide( copy1a );
+	hide( copy1b );
+	hide( copy1c );
+	hide( copy2a );
+	hide( copy3a );
+	hide( iconmask );
+	hide( iconbox );
+	hide( pricemask );
+	hide( pricemask2 );
+	hide( pricebox );
+	hide( pricebox2 );
+	hide( cta );
+	hide( cover );
+	hide( bookingBg );
+	hide( bookingWidget );
+	hide( border );
+
+	advance();
+
+	function advance () {
+		    
+		if ( phase == 0 ) {
+
+		    show( main );
+		    show( border );
+		    show( cover );
+
+		    show( bg1 );
+			t.set(bg1, {x:0, y:0, alpha:1.0, scale:0.5, rotationZ:'0.01deg', force3D:true, transformOrigin:'top left'});
+			t.to(bg1, 13.1, {x:-stageWidth*.05, y:-stageHeight*.025, scale:0.55, rotationZ:'0.01deg', force3D:true, transformOrigin:'top left'});
+
+		    show( logo );
+			t.set(logo, {x:0, y:0, scale:0.5, transformOrigin:'top left'});
+
+		    show( gblock );
+			t.set(gblock, {x:0, y:238, scale:0.5, transformOrigin:'top left'});
+
+		    show( copy1block );
+			t.set(copy1block, {x:textWidth/2, y:6, alpha:1.0, scale:0.9, transformOrigin:'top 50%', rotationZ:'0.01deg', force3D:true});
+			t.to(copy1block, 4.5, {x:textWidth/2, y:0, scale:1.0, transformOrigin:'top 50%', rotationZ:'0.01deg', force3D:true, ease:Linear.easeNone });
+
+		    show( copy1a );
+			t.set(copy1a, {x:-textWidth/2, y:220, alpha:0.0, scale:textScale, transformOrigin:'top 50%'});
+			t.to(copy1a, textZoomTime, {x:-textWidth/2, y:0, alpha:1.0, scale:1.0, transformOrigin:'top 50%', ease:Expo.easeInOut});
+
+		    show( copy1b );
+			t.set(copy1b, {x:-textWidth/2, y:300, alpha:0.0, scale:textScale, transformOrigin:'top 50%'});
+			t.to(copy1b, textZoomTime, {x:-textWidth/2, y:0, alpha:1.0, scale:1.0, transformOrigin:'top 50%', delay:textCasc, ease:Expo.easeInOut});
+
+		    show( copy1c );
+			t.set(copy1c, {x:-textWidth/2, y:300, alpha:0.0, scale:textScale, transformOrigin:'top 50%'});
+			t.to(copy1c, textZoomTime, {x:-textWidth/2, y:0, alpha:1.0, scale:1.0, transformOrigin:'top 50%', delay:textCasc*2, ease:Expo.easeInOut});
+
+		    delay(2.85);
+		}
+		else if ( phase == 1 ) {
+
+			t.to(copy1block, panTime, {x:-300, ease:Expo.easeInOut});
+
+		    show( copy2block );
+
+		    show( copy2a );
+			t.set(copy2a, {x:300, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy2a, panTime, {x:0, y:0, ease:Expo.easeInOut, delay:0.1});
+			
+		    show( pricebox );
+			t.set(pricebox, {x:300, y:178, scale:0.5, transformOrigin:'top left'});
+			t.to(pricebox, panTime, {x:65, ease:Expo.easeInOut, delay:0.2});
+			
+		    show( pricebox2 );
+			t.set(pricebox2, {x:400, y:178, scale:0.5, transformOrigin:'top left'});
+			t.to(pricebox2, panTime, {x:150, ease:Expo.easeInOut, delay:0.2});
+			
+		    show( pricemask );
+			t.set(pricemask, {x:300, y:203, scale:0.5, transformOrigin:'top left'});
+			t.to(pricemask, panTime, {x:65, ease:Expo.easeInOut, delay:0.2});
+
+			t.set(copy2b, {x:0, transformOrigin:'top left'});
+			t.set(copy3b, {x:170, transformOrigin:'top left'});
+			
+		    show( pricemask2 );
+			t.set(pricemask2, {x:400, y:203, scale:0.5, transformOrigin:'top left'});
+			t.to(pricemask2, panTime, {x:150, ease:Expo.easeInOut, delay:0.2});
+			
+			t.set(copy2c, {x:0, transformOrigin:'top left'});
+			t.set(copy3c, {x:170, transformOrigin:'top left'});
+
+		    show( iconbox );
+			t.set(iconbox, {x:300, y:50, scale:0.5, transformOrigin:'top left'});
+			t.to(iconbox, panTime, {x:113, ease:Expo.easeInOut});
+			
+		    show( iconmask );
+			t.set(iconmask, {x:300, y:50, scale:0.5, transformOrigin:'top left'});
+			t.to(iconmask, panTime, {x:113, ease:Expo.easeInOut});
+
+			t.set(icon1, {x:0, transformOrigin:'top left'});
+			t.set(icon2, {x:148, transformOrigin:'top left'});
+			
+		    delay(3.0);
+		}
+		else if ( phase == 2 ) {
+
+			t.to(copy2a, panTime, {x:-300, ease:Expo.easeInOut});
+			t.to(copy2b, panTime, {x:-170, ease:Expo.easeInOut});
+			t.to(copy2c, panTime, {x:-170, ease:Expo.easeInOut});
+			t.to(icon1, panTime, {x:-148, ease:Expo.easeInOut});
+			t.to(icon2, panTime, {x:0, ease:Expo.easeInOut});
+
+		    show( copy3block );
+
+		    show( copy3a );
+			t.set(copy3a, {x:300, y:0, alpha:1.0, scale:0.5, transformOrigin:'top left'});
+			t.to(copy3a, panTime, {x:0, y:0, ease:Expo.easeInOut});
+
+			t.to(copy3b, panTime, {x:0, ease:Expo.easeInOut});
+			t.to(copy3c, panTime, {x:0, ease:Expo.easeInOut});
+
+		    delay(3.0);
+		}
+		else if ( phase == 3 ) {
+
+			t.to(copy3a, panTime, {x:-350, ease:Expo.easeInOut});
+			t.to(pricebox, panTime, {x:-300, ease:Expo.easeInOut});
+			t.to(pricebox2, panTime, {x:-300, ease:Expo.easeInOut});
+			t.to(pricemask, panTime, {x:-300, ease:Expo.easeInOut});
+			t.to(pricemask2, panTime, {x:-300, ease:Expo.easeInOut});
+
+			t.to(iconbox, panTime, {x:-300, ease:Expo.easeInOut});
+			t.to(iconmask, panTime, {x:-300, ease:Expo.easeInOut});
+
+		    delay(0.1);
+		}
+		else if ( phase == 4 ) {
+
+			show(bookingBg);
+			t.set(bookingBg, {x:300, y:0, scale:0.5, alpha:1, transformOrigin:'top left'});
+			t.to(bookingBg, panTime, {x:0, ease:Expo.easeInOut, delay:0.0, overwrite:false});
+ 
+			show(bookingWidget);
+			t.set(bookingWidget, {x:300, y:0, scale:1, alpha:1, transformOrigin:'top left'});
+			t.to(bookingWidget, panTime, {x:0, ease:Expo.easeInOut, delay:0.0, overwrite:false});
+ 
+			show(cta);
+			t.set(cta, {x:18, y:250, alpha:0, scale:0.5, transformOrigin:'top left'});
+			t.to(cta, 0.6, {y:195, delay:0.65, ease:Expo.easeOut, overwrite:false})
+			t.to(cta, 0.6, {alpha:1, delay:0.65, ease:Expo.easeOut, overwrite:false})
+
+			show(ctaBorder);
+			t.set(ctaBorder, {x:0, y:0, transformOrigin:'top left'});
+
+			show(ctaOver);
+			t.set(ctaOver, {x:0, y:0, alpha:0.0, transformOrigin:'top left'});
+
+    		ctaIsVisible = true;
+
+		    delay(1.0);
+		}
+		else if ( phase == 5 ) {
+		     
+    		if ( currentLoop < maxLoops)
+    		{
+    			ctaIsVisible = false;
+    			phase = -1;
+    			currentLoop++
+		    
+				t.to(bg1, 0.7, {x:0, y:0, alpha:1.0, scale:1.0, transformOrigin:'top left'});
+
+		   		delay(0.7);
+    		}
+		}
+    }
+
+	cta.onmouseover = function() {
+		if (!ctaIsVisible) return;
+		TweenLite.to(ctaOver, .35, { alpha:1.0, ease:Expo.easeOut});
+	}
+
+	cta.onmouseout = function() {
+		if (!ctaIsVisible) return;
+		TweenLite.to(ctaOver, .35, { alpha:0.0, ease:Expo.easeOut});
+	}
+	
+	cta.onclick = function() {
+		TweenLite.to(ctaOver, .35, { alpha:0.0, ease:Expo.easeOut});
+		clickHandler();
+	}
+
+	border.onclick = function() {
+		Enabler.exit('Background Clickthrough');
+	}
+
+	// bookingWidget functions
+	function clickHandler() {
+		var _from = locationMap[document.getElementById('cityFrom').selectedIndex];
+		var _to = "LON";
+		var _dateDepart = formatDate(departInput.getDate());
+		var _dateReturn = formatDate(returnInput.getDate());
+		var _adults = document.getElementById('adults').value;
+		var _yadults = document.getElementById('yadults').value;
+		var _kids = document.getElementById('kids').value;
+
+		qsVars = "originCity="+_from+"&destinationCity="+_to+"&departureDate="+_dateDepart+"&departureTime=AT"+"&returnDate="+_dateReturn+"&returnTime=AT"+"&paxCounts[0]="+_adults+"&paxCounts[1]="+_yadults+"&paxCounts[3]="+_kids;
+		
+		Enabler.exitQueryString('CTA Clickthrough', qsVars);
+	}
+
+		// Calendar + Date functions
+	var dateDepart, dateReturn;
+	var departInput = new Pikaday({
+		field: document.getElementById('depart'),
+		position: 'bottom left',
+		reposition: false,
+		format : "MM/DD/YY",
+		minDate: new Date(),
+		maxDate: new Date(2020, 12, 31),
+		onSelect: function (date) {
+		    const year = date.getFullYear().toString().substr(-2),
+		    	month = date.getMonth() + 1,
+		        	day = date.getDate(),
+		        	formattedDate = [
+		        	month,
+		        	day,
+		        	year
+		        ].join('/')
+		    document.getElementById('depart').value = formattedDate;
+		    returnInput.setDate(departInput.getDate().addDays(1));
+		}
+	});
+
+	//date adding function
+	Date.prototype.addDays = function(days) {
+	  var dat = new Date(this.valueOf());
+	  dat.setDate(dat.getDate() + days);
+	  return dat;
+	}
+
+	var returnInput = new Pikaday({
+		field: document.getElementById('return'),
+		position: 'bottom left',
+		reposition: false,
+		format : "MM/DD/YY",
+		minDate: new Date(),
+		maxDate: new Date(2020, 12, 31),
+		onSelect: function (date) {
+		    const year = date.getFullYear().toString().substr(-2),
+		    	month = date.getMonth() + 1,
+		        	day = date.getDate(),
+		        	formattedDate = [
+		        	month,
+		        	day,
+		        	year
+		        ].join('/')
+		    document.getElementById('return').value = formattedDate;
+		}
+	});
+
+	var today = new Date();
+	departInput.setDate(today);
+	returnInput.setDate(today.addDays(1));
+
+	formatDate = function (d){
+		var _y = d.toISOString().substr(0,4);
+		var _d = d.toISOString().substr(5,2);
+		var _m = d.toISOString().substr(8,2);
+		return _d+"/"+_m+"/"+_y;
+	}
+
+	// Dynamic URL
+	var qsVars = "";
+
+	var locationMap = [ "HKG"];
+
+
+	// utility functions
+	function hide(element) {
+		element.style.display = 'none';
+	}
+	
+	function show(element) {
+		element.style.display = 'block';
+	}
+
+	function delay(time) {
+	    t.delayedCall(time, advance);
+	    phase++;
+	}
+}
+</script>
+
+
+</body>
+</html>
+
