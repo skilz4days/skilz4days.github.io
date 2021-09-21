@@ -58,7 +58,7 @@ body {
 
 .social-link {
     font-size: 2rem;
-    color: #777;
+    color: #fff;
     transition: color .3s;
 }
 
@@ -69,7 +69,7 @@ body {
 .year {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #555;
+    color: #fff;
 }
 /* end of sidebar */
 
@@ -89,12 +89,16 @@ body {
     transition: left .8s cubic-bezier(1, 0, 0, 1);
 }
 
+.navigation-logo {
+    text-align: center;
+}
+
 .navigation-heading {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.5rem;
     font-weight: 300;
     letter-spacing: .2rem;
-    color: #deaa86;
+    color: #fff;
     text-align: center;
 }
 
@@ -103,7 +107,7 @@ body {
 }
 
 .navigation-search-input {
-    width: 30rem;
+    width: 20rem;
     padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, .3);
     font-family: 'Josefin Sans', sans-serif;
@@ -220,7 +224,7 @@ body {
 .header {
     margin-left: 6rem;
     height: 100vh;
-    background: linear-gradient(to top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .4)), url(../img/header-1.jpg) center no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(../img/header-1.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -253,6 +257,8 @@ body {
     font-weight: 400;
     margin-bottom: 0;
     animation: anim 2s;
+    text-align: center;
+
 }
 
 .banner-paragraph {
@@ -262,15 +268,15 @@ body {
 }
 
 .banner-button {
-    width: 21rem;
+    width: 25rem;
     padding: 1.2rem 2rem;
     font-size: 2rem;
-    color: #333;
+    color: #fff;
     letter-spacing: .1rem;
     border: none;
     border-radius: 10rem;
     outline: none;
-    background: linear-gradient(to right, gold, goldenrod);
+    background: linear-gradient(to right, #2A3780, #0C1233);
     cursor: pointer;
     animation: anim 1s 1s backwards;
 }
@@ -295,7 +301,7 @@ body {
 
 /* about us */
 .about-us {
-    margin-left: 8rem;
+    margin-left: 6rem;
     display: flex;
     background-color: #ddd;
 }
@@ -306,7 +312,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10rem;
     box-sizing: border-box;
 }
 
@@ -358,34 +363,40 @@ body {
 }
 
 .about-us-images {
-    flex: 1 1;
     position: relative;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.circle-wrapper {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-align: center;
+
 }
 
 .image {
-    width: 32rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    box-shadow: 0 3rem 6rem rgba(0, 0, 0, .4);
+    width: 15rem;
+    position: relative;
+    
+/*    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0);
     border-radius: .4rem;
-    border: .2rem solid #b85d1c;
+    border: .2rem solid none; */
 }
 
-.image-1 {
-    transform: translate(-20%, -90%);
-}
+.circle-img {
+    width: 50%;
+    padding: 3rem;
+    position: relative;
 
-.image-2 {
-    transform: translate(-70%, -70%);
-}
-
-.image-3 {
-    transform: translate(-50%, -50%);
-}
-
-.image-4 {
-    transform: translate(-30%, -30%);
+    
+/*    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0);
+    border-radius: .4rem;
+    border: .2rem solid none; */
 }
 /* end of about us */
 
@@ -419,7 +430,7 @@ body {
 
 /* rooms */
 .rooms {
-    margin-left: 8rem;
+    margin-left: 6rem;
 }
 
 .rooms-cards-wrapper {
@@ -502,7 +513,7 @@ body {
 
 /* customers */
 .customers {
-    margin-left: 8rem;
+    margin-left: 6rem;
     padding-bottom: 7rem;
     background-color: #15141b;
 }
@@ -559,7 +570,7 @@ body {
 
 /* footer */
 .footer {
-    margin-left: 8rem;
+    margin-left: 6rem;
 }
 
 .main-part {
@@ -698,18 +709,26 @@ body {
 
 @media(max-width: 1200px) {
     .about-us {
-        flex-direction: column;
-        padding-bottom: 20rem;
+    	flex-direction: column;
+    	padding-bottom: 20rem;
     }
 
-    .about-us-content {
-        margin-bottom: 13rem;
+    .about-us-images {
+    	width:100%;
+        margin-bottom: 1rem;
     }
 
     .image {
-        width: 25rem;
+        width: 15rem;
     }
+
+	.circle-img {
+		width: 65%;
+		padding: 3rem;
+		position: relative;
+	}
 }
+
 
 @media(max-width: 900px) {
     .banner {
@@ -725,7 +744,7 @@ body {
     }
 
     .banner-button {
-        width: 16rem;
+        width: 20rem;
         font-size: 1.5rem;
     }
 }
@@ -760,7 +779,7 @@ body {
     }
 
     .navigation-search-input {
-        width: 20rem;
+        width: 15rem;
     }
 
     .hotel-heading {
@@ -782,14 +801,13 @@ body {
     }
 
     .about-us {
-        padding-bottom: 15rem;
+        padding-bottom: 0rem;
     }
 
     .about-us-heading {
         font-size: 2.5rem;
         text-align: center;
     }
-
     .sub-heading {
         font-size: 2rem;
         text-align: center;
