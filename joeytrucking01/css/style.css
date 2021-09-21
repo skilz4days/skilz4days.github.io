@@ -79,7 +79,7 @@ body {
     left: -52rem;
     width: 40rem;
     height: 100%;
-    background: linear-gradient(to top, rgba(34, 32, 41, .6), rgba(34, 32, 41, .8)) ,url(../img/menu-bg.png) center no-repeat;
+    background: linear-gradient(to top, rgba(34, 32, 41, .6), rgba(34, 32, 41, .8)) ,url(../img/menu-bg-02.png) center no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -304,6 +304,7 @@ body {
     margin-left: 6rem;
     display: flex;
     background-color: #ddd;
+    padding-top: 10rem;
 }
 
 .about-us-content {
@@ -711,6 +712,11 @@ body {
     .about-us {
     	flex-direction: column;
     	padding-bottom: 20rem;
+    }
+
+    .about-us-paragraph {
+    	padding-left: 2rem;
+    	padding-right: 2rem;
     }
 
     .about-us-images {
