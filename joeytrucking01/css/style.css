@@ -91,6 +91,17 @@ body {
 
 .navigation-logo {
     text-align: center;
+    transition: transform 60s;
+    position: absolute;
+	display: block;
+}
+
+.nav-logo-img {
+
+}
+
+.logo-wheel {
+	transform: rotate(1080deg);
 }
 
 .navigation-heading {
@@ -216,6 +227,9 @@ body {
 .checkbox:checked ~ .sidebar .line-3 {
     transform: rotate(405deg) translate(-5px, -6px);
     width: 2.5rem;
+    
+
+    
 }
 /* end of navigation */
 /* end of navbar */
