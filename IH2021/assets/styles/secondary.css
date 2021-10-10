@@ -1,0 +1,182 @@
+* {
+	font-family: 'Arial', sans-serif;
+	font-size:14px;
+	box-sizing: border-box;
+	margin:0;
+}
+	
+html, body {
+	background: #cc0000;
+	color: white;
+	margin:0;
+	}
+	
+
+
+body {
+	display: grid;
+	grid: auto / auto;
+	justify-items: center;
+}
+
+header,
+footer,
+nav,
+aside,
+main {
+	grid-column: 1 / -1;
+}
+
+header {
+display:grid;
+justify-items:center;
+}
+
+.button-back-top {
+	width:100px;
+	justify-self:start;
+}
+
+.appbanner {
+	justify-self:center;
+}
+
+nav {
+	margin:30px 0;
+}
+
+nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+nav li {
+	float:left;
+}
+
+li a {
+	display: block;
+	color: white;
+	font-size: 21px;
+	text-align: center;
+	padding: 0px 16px;
+	text-decoration: none;
+	border-right: 1px solid #bbb;
+  }
+  
+li:last-child {
+	border-right: none;
+  }
+  
+li a:hover {
+	background-color: #111;
+  }
+
+.section-title {
+	margin-bottom:50px;
+}
+
+main h1 {
+	font-size: 100px;
+	font-weight: bold;
+	text-align: center;	
+	padding-top: 50px;
+}
+
+main h2 {
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom:50px;
+	text-align: center;	
+}
+
+main {
+
+	width:100%;
+	background-color:white;
+	color:black;
+	text-align:center;
+
+}
+
+main ul{
+	list-style-type:none;
+}
+
+main img{
+	margin-bottom:40px;
+}
+
+.main-img-01 {
+	text-align: center;
+}
+
+.used-equipment-master {
+	padding-top:70px;
+	display: grid;
+	grid-template-columns: auto auto 20em;
+		
+}
+
+.used-equipment-search {
+	padding-left:1em;
+	text-align:left;
+}
+
+.used-equipment-display {
+    grid-column-start: 2;
+
+}
+}
+aside h3 {
+	font-size: 50pt;
+	font-weight: bold;
+	text-align: center;	
+
+}
+
+aside h4 {
+	font-size: 40pt;
+	font-weight: bold;
+	text-align: center;	
+	margin-bottom:100px;
+}
+
+.schedule-service-form {
+
+	margin-bottom:50px;
+	text-align:left;
+	margin-left:100px;
+}
+
+.schedule-service-form input {
+
+	width:500px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing:border-box;
+}
+
+.schedule-service-form input[type=text]:focus {
+	border: 3px solid #555;
+  }
+
+  .schedule-service-form label {
+	display: inline-block;
+
+  }
+
+  .aside-img-1 {
+	  margin-top:80px;
+  }
+  .aside-img-2 {
+	margin-top:50px;
+}
+.footer-logo {
+	margin-top:80px;
+}
+.button-back-bottom {
+	width:100px;
+	justify-self:start;
+}

@@ -15,22 +15,53 @@ html, body {
 
 body {
 	display: grid;
-	grid: auto-flow min-content / 1fr;
+	grid-template-columns: auto;
 	justify-items: center;
 }
 
 header,
+footer,
 aside,
-main,
-{
+main {
 	grid-column: 1 / -1;
-
 }
 
+  
 header {
+
 	margin-top:90px;
 	margin-bottom:60px;
 }
+
+
+header nav {
+	width:100%;
+}
+
+header nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+
+
+}
+
+header nav li {
+	float:left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+
+  li a:hover {
+	background-color: rgb(255, 0, 0);
+  }
 
 aside h1 {
 	font-size: 100px;
