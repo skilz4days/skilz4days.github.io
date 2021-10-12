@@ -14,23 +14,25 @@ html, body {
 
 
 body {
-	display: grid;
-	grid-template-columns: auto;
-	justify-items: center;
+display:grid;
+grid-template-columns: auto;
+
 }
 
-header,
-footer,
-aside,
+
 main {
-	grid-column: 1 / -1;
+	display: grid;
+	justify-content: center;
+
 }
 
-  
-header {
 
-	margin-top:90px;
-	margin-bottom:60px;
+
+header{
+
+	display:grid;
+	justify-content: center;
+
 }
 
 
@@ -53,7 +55,6 @@ header nav li {
 li a {
 	display: block;
 	color: white;
-	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
   }
@@ -63,37 +64,39 @@ li a {
 	background-color: rgb(255, 0, 0);
   }
 
-aside h1 {
+section h1 {
 	font-size: 100px;
 	font-weight: bold;
-	text-align: center;	
 }
 
-aside h2 {
+section h2 {
 	font-size: 50px;
 	font-weight: bold;
 	margin-bottom:50px;
-	text-align: center;	
 }
 
 main ul{
 	list-style-type:none;
+	padding:0;ß
 }
 
 main img{
 	margin-bottom:40px;
 }
 
-aside h3 {
-	font-size: 50pt;
+section h3 {
+	font-size: 50px;
 	font-weight: bold;
-	text-align: center;	
 
 }
 
-aside h4 {
-	font-size: 40pt;
+section h4 {
+	font-size: 40px;
 	font-weight: bold;
-	text-align: center;	
 	margin-bottom:100px;
+}
+
+section {
+	display:grid;
+text-align:center;
 }
