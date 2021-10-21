@@ -5,6 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Find Your Implement | CASE IH KIOSK PROJECT 2021</title>
 <link rel="stylesheet" href="./assets/styles/secondary.css">
+
+<script>
+$(document).ready(function() {
+  var target_domain = "wwww.caseih.com/northamerica/en-us/home";
+  var protocol = "https://";
+  var path = ""; //e.g. "/index.html"
+  var target_host = protocol + target_domain;
+  var target_URI = target_host + path;
+  var method = "GET";
+  $.ajax({
+    url: target_URI,
+    type: method,
+    headers: {
+      "X-Requested-With": "", //nullifies the default AJAX value of "XMLHttpRequest"
+      "Origin": target_host, //lies to the target server
+      "Referer": target_host, //lies to the target server
+      "X-Http-Method-Override": method, //forces the specified method
+    },
+    crossDomain: "true" //applies cross domain settings
+  });
+});
+$(document).ajaxSuccess(function() {
+  $("#iframe_imitator").html(xhr.responseText);
+});
+</script>
+
 </head>
 
 <body>
@@ -31,12 +57,21 @@
 
 <main>
 
-    <iframe 
+<!--     <iframe 
     src="https://www.caseih.com/northamerica/en-us/toolsresources/right-red-tractor" 
     height="700px" 
     width="100%" 
     title="iframe-find-implement">
     </iframe>
+ -->
+<!--     <embed src="https://www.caseih.com/northamerica/en-us/toolsresources/right-red-tractor"
+    width=100%
+    height=700px
+    onerror="alert('URL invalid !!');" />
+ -->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="iframe_imitator"></div>
 
 </main>
 
