@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Find Your Implement | CASE IH KIOSK PROJECT 2021</title>
 <link rel="stylesheet" href="./assets/styles/secondary.css">
+<!-- <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js?ver=1.4'></script>
 
-<script>
+<script type='text/javascript'>
 $(document).ready(function() {
-  var target_domain = "wwww.caseih.com/northamerica/en-us/home";
-  var protocol = "https://";
+  var target_domain = "www.caseih.com/northamerica/en-us/home";
+  var protocol = "http://";
   var path = ""; //e.g. "/index.html"
   var target_host = protocol + target_domain;
   var target_URI = target_host + path;
@@ -27,9 +28,17 @@ $(document).ready(function() {
   });
 });
 $(document).ajaxSuccess(function() {
-  $("#iframe_imitator").html(xhr.responseText);
+  $("#case").html(xhr.responseText);
 });
-</script>
+</script> -->
+
+
+
+<!-- <script type='text/javascript'>
+$(document).ready(function (){
+$('#case').load("https://www.caseih.com/northamerica/en-us/home/")   
+})
+</script> -->
 
 </head>
 
@@ -70,8 +79,10 @@ $(document).ajaxSuccess(function() {
     onerror="alert('URL invalid !!');" />
  -->
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="iframe_imitator"></div>
+<div id="case">
+    <object height="100%" width="100%" data="https://www.caseih.com/northamerica/en-us/home/">
+
+</div>
 
 </main>
 
