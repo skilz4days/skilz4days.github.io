@@ -1,10 +1,105 @@
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
+<!DOCTYPE html>
+<html lang=en-us>
+<meta charset=utf-8>
+<html>
+<head>
+    <title>Colorapp 01</title>
+<style>
+
+body, html {
+  height:100%;
+}
+
+body{
+  background-color:aqua;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+
+}
+
+.circleContainer {
+  font-family:Arial, sans-serif;
+  overflow:hidden;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background:#fff;
+  flex-wrap:wrap;
+}
+
+.circle {
+  width:9vw;
+  height:9vw;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:black;
+  font-size:3vw;
+  background-color: darkorchid;
+ 
+}
+
+.colorChooser {
+background-color: darksalmon;
+display:flex;
+flex-direction: column;
+align-items: center;
+padding-top:50px;
+
+}
+
+.swatch {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script type="text/javascript">
+   
+   $('.swatch').each(function () {
+        $(this).css("background", $(this).data('bg-color'));
+    });
+    
+
+</script>
+</head>
+
+<body>
+
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <div class="colorChooser">
+    <div class="swatch" data-bg-color="#4259a6"></div>
+    <div class="swatch" data-bg-color="#f15a3a"></div>
+    <div class="swatch" data-bg-color="#e91e2c"></div>
+    <div class="swatch" data-bg-color="#c9203e"></div>
+    <div class="swatch" data-bg-color="#3bb44a"></div>
+    <div class="swatch" data-bg-color="#d8e14b"></div>
+    <div class="swatch" data-bg-color="#2d2d74"></div>
+    <div class="swatch" data-bg-color="#62cbe6"></div>
+    <div class="swatch" data-bg-color="#e7a23b"></div>
+    <div class="swatch" data-bg-color="#4ec5d5"></div>
+  </div>
+
+</body>
+</html>
