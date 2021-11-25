@@ -5,7 +5,7 @@
 <html>
 <head>
 
-<title>Colorapp 01</title>
+<title>Colorapp 02: Basic Animation</title>
 
 <style>
 
@@ -544,19 +544,20 @@ function changeColor1() {
 document.querySelectorAll(".swatch").forEach(function(swatch) {
   swatch.addEventListener("click", function() {
     gsap.to(".circle", {
-      duration: 0.5, 
+      duration: 1, 
       stagger: 0.1,
-      scale: 1.5,
+      scale: 1.7,
       ease: "elastic",
       force3D: true
-    });
+    }),
 
     gsap.to(".circle", {
-      duration: 0.5, 
+      duration: 1, 
       stagger: 0.1,
       scale: 1,
       ease: "back in",
-      force3D: true
+      force3D: true,
+      delay: 0.1
     });
 
     $('.circle').each(function () {
