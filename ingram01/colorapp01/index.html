@@ -11,7 +11,7 @@ body, html {
 }
 
 body{
-  background-color:aqua;
+  background-color:#fff;
   display: grid;
   grid-template-columns: 1fr 100px;
 
@@ -24,24 +24,23 @@ body{
   justify-content:space-around;
   align-items:center;
   background:#fff;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
+  margin-bottom: 20px;
+
 }
 
 .circle {
-  width:9vw;
-  height:9vw;
+  width:3em;
+  height:3em;
   border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   color:black;
-  font-size:3vw;
   background-color: darkorchid;
+  transform-origin: center;
  
 }
 
 .colorChooser {
-background-color: darksalmon;
+background-color: #000;
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -52,7 +51,7 @@ padding-top:50px;
 .swatch {
     width: 80px;
     height: 80px;
-    border: 1px solid #000;
+    border: 2px solid #fff;
     border-radius: 10px;
     margin-bottom: 10px;
 
@@ -63,19 +62,91 @@ padding-top:50px;
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-<script type="text/javascript">
+<script>
    
    $('.swatch').each(function () {
         $(this).css("background", $(this).data('bg-color'));
     });
     
+    function changeColor() {
+    document.getElementsByClassName("circle").style.backgroundColor = "#4259a6";
+}
+
+function changeColor1() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#4259a6"
+	}
+}
+
+function changeColor2() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#f15a3a";
+	}
+}
+
+function changeColor3() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#e91e2c";
+	}
+}
+
+function changeColor4() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#3bb44a";
+	}
+}
+
+function changeColor5() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#d8e14b";
+	}
+}
+
+function changeColor6() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#2d2d74";
+	}
+}
+
+function changeColor7() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#62cbe6";
+	}
+}
+
+function changeColor8() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#e7a23b";
+	}
+}
+
+function changeColor9() {
+	var elements = document.getElementsByClassName('circle'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#4ec5d5";
+	}
+}
 
 </script>
 </head>
 
 <body>
 
+<div id="main">
   <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
@@ -88,17 +159,270 @@ padding-top:50px;
     <div class="circle"></div>
   </div>
 
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ </div>
+  
+  <div class="circleContainer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+</div>
+
   <div class="colorChooser">
-    <div class="swatch" data-bg-color="#4259a6"></div>
-    <div class="swatch" data-bg-color="#f15a3a"></div>
-    <div class="swatch" data-bg-color="#e91e2c"></div>
-    <div class="swatch" data-bg-color="#c9203e"></div>
-    <div class="swatch" data-bg-color="#3bb44a"></div>
-    <div class="swatch" data-bg-color="#d8e14b"></div>
-    <div class="swatch" data-bg-color="#2d2d74"></div>
-    <div class="swatch" data-bg-color="#62cbe6"></div>
-    <div class="swatch" data-bg-color="#e7a23b"></div>
-    <div class="swatch" data-bg-color="#4ec5d5"></div>
+    <div class="swatch" style="background-color:#4259a6" data-bg-color="#4259a6" onclick="changeColor1()"></div>
+    <div class="swatch" style="background-color:#f15a3a"data-bg-color="#f15a3a" onclick="changeColor2()"></div>
+    <div class="swatch" style="background-color:#e91e2c"data-bg-color="#e91e2c" onclick="changeColor3()"></div>
+    <div class="swatch" style="background-color:#3bb44a"data-bg-color="#3bb44a" onclick="changeColor4()"></div>
+    <div class="swatch" style="background-color:#d8e14b"data-bg-color="#d8e14b" onclick="changeColor5()"></div>
+    <div class="swatch" style="background-color:#2d2d74"data-bg-color="#2d2d74" onclick="changeColor6()"></div>
+    <div class="swatch" style="background-color:#62cbe6"data-bg-color="#62cbe6" onclick="changeColor7()"></div>
+    <div class="swatch" style="background-color:#e7a23b"data-bg-color="#e7a23b" onclick="changeColor8()"></div>
+    <div class="swatch" style="background-color:#4ec5d5"data-bg-color="#4ec5d5" onclick="changeColor9()"></div>
   </div>
 
 </body>
