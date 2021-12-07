@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>html5js03: jpg viewer</title>
+
+    <style>
+        #prev,
+        #next {
+            width: 50px;
+            height: 50px;
+        }
+
+        #slideshow {
+            height:100px;
+            width:100px;
+        }
+    </style>
+</head>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+
+
+<body>
+
+
+    <img id="prev" src="images/arrow-left-solid.svg" />
+    <img id="slideshow" />
+    <img id="next" src="images/arrow-right-solid.svg" />
+
+
+
+    <script>
+        (function ($) {
+            $.fn.slideshow = function (options) {
+                return this.each(function () {
+                    var $img = $(this),
+                        current = 0;
+
+                    function show(index) {
+                        var total = options.images.length;
+                        while (index < 0)
+                            index += total;
+                        while (index >= total)
+                            index -= total;
+                        current = index;
+                        $img.attr('src', options.images[index]);
+                    }
+                    function prev() {
+                        show(current - 1);
+                        console.log("prev");
+
+                    }
+                    function next() {
+                        show(current + 1);
+                        console.log("next");
+
+                    }
+                    $img.bind('prev', prev).bind('next', next).bind('goto', function (e, index) {
+                        show(index);
+                    });
+                    var auto = true, id;
+                    function start() {
+                        stop();
+                        auto = true;
+                        id = setTimeout(next, options.interval || 2000);
+                    }
+                    function stop() {
+                        auto = false;
+                        clearTimeout(id);
+                    }
+                    $img.bind('start', start).bind('stop', stop);
+                    function show(index) {
+                        // Same as before...
+                        if (auto)
+                            start();
+                    }
+
+
+
+                });
+            };
+        })(jQuery);
+
+        (function ($) {
+            var $image = $('#slideshow');
+            $image.slideshow({
+                images: ['slide1.jpg', 'slide2.jpg', 'slide3.jpg', 'slide4.jpg'],
+                interval: 3000
+            });
+            $('#prev').click(function () {
+                $image.triggerHandler('prev');
+
+            });
+            $('#next').click(function () {
+                $image.triggerHandler('next');
+
+            });
+            $image.triggerHandler('goto', 0); // Initialize on 0
+            $image.triggerHandler('start'); // We want auto cycling
+        })(jQuery);
+
+    </script>
+</body>
+
+</html>
