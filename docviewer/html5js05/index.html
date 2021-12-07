@@ -13,18 +13,19 @@ these make the slideshow work
 
         #slides {
             position: relative;
-            height: 300px;
             padding: 0px;
             margin: 0px;
             list-style-type: none;
+        }
+
+        #slides img {
+            width: 100%;
         }
 
         .slide {
             position: absolute;
             left: 0px;
             top: 0px;
-            width: 100%;
-            height: 100%;
             opacity: 0;
             z-index: 1;
 
@@ -46,9 +47,7 @@ just for appearance; change whatever you want
 
         .slide {
             font-size: 40px;
-            padding: 40px;
             box-sizing: border-box;
-            background: #333;
             color: #fff;
         }
     </style>
@@ -63,11 +62,10 @@ just for appearance; change whatever you want
     <button class="controls" id="next">Next</button>
 
     <ul id="slides">
-        <li class="slide showing">Slide 1</li>
-        <li class="slide">Slide 2</li>
-        <li class="slide">Slide 3</li>
-        <li class="slide">Slide 4</li>
-        <li class="slide">Slide 5</li>
+        <li class="slide showing"><img src="slide1.jpg"></li>
+        <li class="slide"><img src="slide2.jpg"></li>
+        <li class="slide"><img src="slide3.jpg"></li>
+        <li class="slide"><img src="slide4.jpg"></li>
     </ul>
 
 
